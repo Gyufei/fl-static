@@ -1,7 +1,8 @@
 import Image from "next/image";
-import NewestItemCard from "./newest-item-card";
 import { useTranslations } from "next-intl";
 import { Link } from "@/app/navigation";
+import NewestItemCard from "./newest-item-card";
+import { AppLink } from "@/lib/utils/jump-url";
 
 export default function HomeBanner() {
   const t = useTranslations("Home");
@@ -37,12 +38,12 @@ export default function HomeBanner() {
       </div>
 
       <div className="mt-10 flex w-full flex-col items-center space-y-3 px-4 sm:w-fit sm:flex-row sm:space-x-10 sm:space-y-0 sm:px-0">
-        <Link href="/marketplace">
+        <Link href={`${AppLink}/marketplace`}>
           <div className="flex h-12 w-full items-center justify-center rounded-xl bg-yellow px-5 text-lg leading-6">
             {t("btn-LaunchPointsMarketplace")}
           </div>
         </Link>
-        <Link href="/bounty">
+        <Link href={`${AppLink}/bounty`}>
           <div className="flex h-12 w-full items-center justify-center rounded-xl bg-yellow px-5 text-lg leading-6">
             {t("btn-LaunchMissionMarketplace")}
           </div>

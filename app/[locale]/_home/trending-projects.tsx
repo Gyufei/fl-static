@@ -1,27 +1,30 @@
 "use client";
 
-import Image from "next/image";
-import { useMarketplaces } from "@/lib/hooks/api/use-marketplaces";
-import { IMarketplace } from "@/lib/types/marketplace";
-import { useRouter } from "@/app/navigation";
-import { useTranslations } from "next-intl";
 import { useMemo } from "react";
-import useTge from "@/lib/hooks/marketplace/useTge";
-import { formatNum, toPercent } from "@/lib/utils/number";
-import { Skeleton } from "@/components/ui/skeleton";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 import NP from "number-precision";
-import { ProjectDecimalsMap } from "@/lib/const/constant";
+
+import { useRouter } from "@/app/navigation";
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatNum, toPercent } from "@/lib/utils/number";
+
+import {
+  IMarketplace,
+  useMarketplaces,
+  ProjectDecimalsMap,
+  checkIsAfterTge,
+} from "@/lib/api/use-marketplaces";
 
 export default function TrendingProject() {
   const t = useTranslations("Home");
   const { data: marketplaceData, isLoading: isLoadingFlag } = useMarketplaces();
-  const { checkIsAfterTge } = useTge();
 
   const markets = useMemo(() => {
     return (marketplaceData || [])
       .filter((m) => m.status !== "offline")
       .filter((m) => !checkIsAfterTge(m.tge));
-  }, [marketplaceData, checkIsAfterTge]);
+  }, [marketplaceData]);
 
   return (
     <div className="flex flex-col items-center pt-20">
@@ -48,7 +51,7 @@ function ItemCard({
   marketplace: IMarketplace;
   isLoadingFlag: boolean;
 }) {
-  const t = useTranslations("card-Marketplace");
+  const t = useTranslations("Home");
   const router = useRouter();
 
   const pointDecimalNum = useMemo(() => {

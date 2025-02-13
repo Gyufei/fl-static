@@ -65,6 +65,13 @@
     "lb-SubmitTicket": "提交工单",
     "lb-ListingProposal": "上市提案",
     "lb-ContactUs": "联系我们",
-    "lb-Docs": "文档"
+    "lb-Docs": "文档",
+
+    "lb-InitialListing": "发行价",
+    "lb-AllTimeHigh": "最高成交价",
+    "lb-FilledOrders": "已成交",
+    "lb-24hChange": "变化率/24h",
+    "lb-ListedSupply": "挂单量",
+    "lb-ActiveWallets": "活跃钱包"
   }
 }

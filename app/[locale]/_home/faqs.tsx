@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import React, { forwardRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/app/navigation";
+import { cn } from "@/lib/utils/common";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import React, { forwardRef, useState } from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/app/navigation";
-import { cn } from "@/lib/utils/common";
 
 export default function Faqs() {
   const t = useTranslations("Home");

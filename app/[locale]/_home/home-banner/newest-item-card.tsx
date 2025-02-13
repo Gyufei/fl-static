@@ -1,17 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useWsMsgSub } from "@/lib/hooks/api/use-ws-msgs";
+import { useWsMsgSub } from "@/lib/api/use-ws-msgs";
 import { formatNum } from "@/lib/utils/number";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { ChainType } from "@/lib/types/chain";
 
 export default function NewestItemCard() {
   const t = useTranslations("Home");
   const [prevMsg, setPrevMsg] = useState<any>(null);
   const [nowMsg, setNowMsg] = useState<any>(null);
-  const { data } = useWsMsgSub(ChainType.BNB);
+  const { data } = useWsMsgSub("bnb");
 
   useEffect(() => {
     if (!data) return;

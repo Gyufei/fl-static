@@ -1,4 +1,5 @@
-import HoverIcon from "@/components/share/hover-icon";
+"use client";
+import HoverIcon from "@/components/ui/hover-icon";
 import {
   Popover,
   PopoverContent,

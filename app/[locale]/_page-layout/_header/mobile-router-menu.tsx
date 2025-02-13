@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { X } from "lucide-react";
 import { usePathname, useRouter } from "@/app/navigation";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
@@ -17,7 +16,7 @@ export default function MobileRouterMenu() {
         onClick={() => setShowMenu(!showMenu)}
       >
         {showMenu ? (
-          <X className="h-4 w-4" />
+          <Image src="/icons/close.svg" width={16} height={16} alt="close" />
         ) : (
           <div className="flex flex-col space-y-[5.5px]">
             <Image

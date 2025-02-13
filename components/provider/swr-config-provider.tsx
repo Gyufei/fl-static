@@ -1,6 +1,6 @@
 "use client";
 
-import { isProduction } from "@/lib/PathMap";
+import { isProduction } from "@/lib/api/PathMap";
 import { SWRConfig } from "swr";
 
 export default function SWRConfigProvider({

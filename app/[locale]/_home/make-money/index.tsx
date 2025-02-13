@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import ModeDesc from "./mode-desc";
 import { cn } from "@/lib/utils/common";
+import ModeDesc from "./mode-desc";
 
 export default function MakeMoney() {
   const t = useTranslations("Home");

@@ -1,5 +1,11 @@
-import Home from "@/app/[locale]/_home";
+import Home from "./_home";
+import Header from "./_page-layout/_header";
 
 export default async function MainPage() {
-  return <Home />;
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  );
 }

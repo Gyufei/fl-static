@@ -1,18 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   handleGoDiscord,
   handleGoGithub,
   handleGoTg,
   handleGoTwitter,
-} from "@/lib/utils/social";
-import { useState } from "react";
-import { useTranslations } from "next-intl";
+} from "@/lib/utils/jump-url";
 import SubscribeInput from "./subscribe-input";
 
 export default function ContactUs() {
   const t = useTranslations("Home");
+
   return (
     <div className="bg-[#F9FAF2] px-4 pt-[60px] sm:px-[120px]">
       <div className="flex flex-col items-end justify-between sm:flex-row">

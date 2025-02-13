@@ -1,15 +1,9 @@
-import "react-modern-drawer/dist/index.css";
 import "@/app/globals.css";
 import { AeonikFont } from "@/app/fonts";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { cn } from "@/lib/utils/common";
-import JotaiProvider from "@/components/provider/jotai-provider";
 import SWRConfigProvider from "@/components/provider/swr-config-provider";
-import MainLayout from "@/app/[locale]/_page-layout/main-layout";
-import { isProduction } from "@/lib/PathMap";
-import WalletModalProvider from "@/components/provider/wallet-modal-provider";
 import { redirect } from "next/navigation";
 import { locales } from "../../i18n";
 
@@ -73,20 +67,16 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={cn(AeonikFont.variable)}>
-        <JotaiProvider>
-          <WalletModalProvider>
-            <SWRConfigProvider>
-              <NextIntlClientProvider messages={messages}>
-                <MainLayout>{children}</MainLayout>
-              </NextIntlClientProvider>
-            </SWRConfigProvider>
-          </WalletModalProvider>
-        </JotaiProvider>
+        <SWRConfigProvider>
+          <NextIntlClientProvider messages={messages}>
+            <div className="h-screen w-screen overflow-y-auto overflow-x-hidden bg-white">
+              <div className="flex w-full flex-col justify-between">
+                <div className="relative mx-auto w-full">{children}</div>
+              </div>
+            </div>
+          </NextIntlClientProvider>
+        </SWRConfigProvider>
       </body>
-      <GoogleAnalytics gaId={isProduction ? "G-FN03SV9KCF" : "G-1PQBDX806E"} />
-      {/* <GoogleTagManager
-        gtmId={isProduction ? "GTM-TPXPN9FF" : "GTM-MRM39HBK"}
-      /> */}
     </html>
   );
 }

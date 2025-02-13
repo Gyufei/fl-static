@@ -1,6 +1,6 @@
-import { Input } from "@/components/ui/input";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Input } from "@/components/ui/input";
 
 function validateEmail(input: string): boolean {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;

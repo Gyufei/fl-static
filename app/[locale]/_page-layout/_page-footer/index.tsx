@@ -1,10 +1,6 @@
-"use client";
-
-import { handleGoTwitter } from "@/lib/utils/social";
-import HoverIcon from "@/components/share/hover-icon";
-import FooterSetting from "./footer-setting";
+import { handleGoTwitter } from "@/lib/utils/jump-url";
+import HoverIcon from "@/components/ui/hover-icon";
 import LanguageSetting from "./language-setting";
-import { LiveMs } from "./live-ms";
 import { cn } from "@/lib/utils/common";
 
 export default function PageFooter({ className }: { className?: string }) {
@@ -15,7 +11,7 @@ export default function PageFooter({ className }: { className?: string }) {
         className,
       )}
     >
-      <LiveMs />
+      <div />
       <div className="flex items-center space-x-5">
         <HoverIcon
           onClick={handleGoTwitter}
@@ -25,7 +21,6 @@ export default function PageFooter({ className }: { className?: string }) {
           height={24}
           alt="x"
         />
-        <FooterSetting />
         <LanguageSetting />
       </div>
     </div>
