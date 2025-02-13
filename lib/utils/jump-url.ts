@@ -4,7 +4,7 @@ export const AppLink = isProduction
   ? "https://gems.tadle.com"
   : "https://preview.tadle.com";
 
-export const TwitterLink = "https://twitter.com/tadle_com";
+export const TwitterLink = "https://x.com/tadle_com";
 export const DiscordLink =
   "https://discord.com/channels/1254632665685164092/1254724478038970409";
 export const TgLink = "https://t.me/tadlecom";

@@ -28,7 +28,7 @@ export default function HomeBanner() {
         />
       </div>
       <div className="flex justify-center text-center text-[40px] leading-[60px] text-black sm:hidden">
-        {t("cap-TheFirstPreSuperMarket")}
+        {t("cap-DecentralizedPreMarketInfrastructure")}
       </div>
 
       <div className="mt-10 hidden text-center text-xl leading-[30px] text-lightgray sm:flex">
