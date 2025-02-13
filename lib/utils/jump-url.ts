@@ -11,8 +11,8 @@ export const TgLink = "https://t.me/tadlecom";
 export const GithubLink = "https://github.com/tadle-com";
 export const DocLink = "https://tadle.gitbook.io/tadle";
 
-export const handleGoApp = (path: string = "") => {
-  window.open(AppLink + path);
+export const handleGoApp = (path: string = "", locale: string = "") => {
+  window.open(AppLink + `/${locale}` + path);
 };
 
 export const handleGoTwitter = () => {

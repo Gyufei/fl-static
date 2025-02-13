@@ -9,6 +9,7 @@
     "th-ItemId": "Item ID",
     "th-Asset": "Asset",
     "th-Value": "Value",
+
     "cap-TheFutureOfOradingStartsHere": "The future of trading starts here",
     "cap-SpecialPointMarket": "Special Gems Market",
     "p-SpecialPointMarket": "Tadle is designed to unlock illiquid assets in the crypto pre-market, leveling the playing field for all participants. With the Tadle Missions Marketplace, you can complete quests to earn Tadle Gems that can be traded immediately for USDT, and with the Tadle Gems Marketplace, you trade project gems from premier projects, and secure your position for upcoming airdrops and profits before a project's TGE.",
@@ -36,6 +37,7 @@
     "p-DecentralizedArbitrationForFairSettlements": "Rely on decentralized arbitration for transparent, unbiased resolution in every gems settlement.",
     "cap-InstantRewards": "Instant rewards!",
     "p-InstantRewards": "Complete missions to participate in a project’s ecosystem and trade out immediately!",
+
     "cap-HowToGetStartedWithTadle": "How to get started with Tadle",
     "cap-ProductAdvantages": "Product Advantages",
     "txt-Step": "Step",
@@ -44,6 +46,7 @@
     "txt-PlaceABuyOrSellOrder": "Place a buy or sell order",
     "txt-CheckMetricsInDashboard": "Check metrics in dashboard",
     "cap-TrendingProjects": "Trending Projects",
+
     "cap-FAQ": "FAQ",
     "btn-More": "more",
     "cap-WhatExactlyArePoints": "What exactly are gems?",
@@ -54,6 +57,7 @@
     "p-WhatIsTheMissionMarketplace": "The Missions Marketplace allows users to complete quests from different projects, engaging in meaningful interactions with their ecosystem that will be rewarded with Tadle Gems upon completion that you can trade for USDT.",
     "cap-WhatExactlyAreTadleGems": "What exactly are Tadle Gems?",
     "p-WhatExactlyAreTadleGems": "Unlike normal points that are issued by a project, to be either traded on Tadle or held on to for an airdrop, Tadle Gems are co-issued by Tadle and the project to reward users for completing missions on the Missions Marketplace and they can be traded instantly for USDT.",
+
     "cap-UnlockEarlyAccess": "Unlock Early Access:",
     "pl-EnterEmailAddress": "Enter Email Address",
     "btn-Subscribe": "Subscribe",

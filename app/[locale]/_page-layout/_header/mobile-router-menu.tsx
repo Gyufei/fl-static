@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import PageFooter from "@/app/[locale]/_page-layout/_page-footer";
 import { handleGoApp } from "@/lib/utils/jump-url";
 
@@ -34,6 +34,7 @@ export default function MobileRouterMenu() {
 }
 
 function MenuList({ onEnd }: { onEnd: () => void }) {
+  const locale = useLocale();
   const t = useTranslations("Home");
 
   return (
@@ -44,7 +45,7 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
         }}
         onClick={() => {
-          handleGoApp("/marketplace");
+          handleGoApp("/marketplace", locale);
           onEnd();
         }}
       >
@@ -66,7 +67,7 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
         }}
         onClick={() => {
-          handleGoApp("/bounty");
+          handleGoApp("/bounty", locale);
           onEnd();
         }}
       >

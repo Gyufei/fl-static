@@ -7,13 +7,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function NavigationBtns() {
   const t = useTranslations("Home");
+  const locale = useLocale();
 
   function handleClick(href: string) {
-    handleGoApp(href);
+    handleGoApp(href, locale);
   }
 
   return (
