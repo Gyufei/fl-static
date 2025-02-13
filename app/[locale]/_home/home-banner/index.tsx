@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/app/navigation";
 import NewestItemCard from "./newest-item-card";
-import { AppLink } from "@/lib/utils/jump-url";
+import { AppLink, DocLink } from "@/lib/utils/jump-url";
 
 export default function HomeBanner() {
   const t = useTranslations("Home");
@@ -49,7 +49,7 @@ export default function HomeBanner() {
           </div>
         </Link>
         <Link
-          href="https://tadle.gitbook.io/tadle"
+          href={DocLink}
           className="ml-1 mt-[22px] flex cursor-pointer items-center space-x-1 sm:ml-0 sm:mt-0"
         >
           <div className="text-lg leading-6 text-black">

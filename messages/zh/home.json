@@ -67,6 +67,9 @@
     "lb-ContactUs": "联系我们",
     "lb-Docs": "文档",
 
+    "btn-Marketplace": "市场",
+    "btn-Bounty": "赏金任务",
+
     "lb-InitialListing": "发行价",
     "lb-AllTimeHigh": "最高成交价",
     "lb-FilledOrders": "已成交",

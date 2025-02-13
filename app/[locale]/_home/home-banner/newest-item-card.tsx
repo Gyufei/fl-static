@@ -5,6 +5,7 @@ import { useWsMsgSub } from "@/lib/api/use-ws-msgs";
 import { formatNum } from "@/lib/utils/number";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import NP from "number-precision";
 
 export default function NewestItemCard() {
   const t = useTranslations("Home");
@@ -13,6 +14,7 @@ export default function NewestItemCard() {
   const { data } = useWsMsgSub("bnb");
 
   useEffect(() => {
+    NP.enableBoundaryChecking(false);
     if (!data) return;
 
     const msgAll = data.filter((msg) => !!msg);

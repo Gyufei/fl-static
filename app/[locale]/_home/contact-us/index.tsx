@@ -1,15 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 import { useTranslations } from "next-intl";
-import {
-  handleGoDiscord,
-  handleGoGithub,
-  handleGoTg,
-  handleGoTwitter,
-} from "@/lib/utils/jump-url";
 import SubscribeInput from "./subscribe-input";
+import SocialIcon from "./social-icon";
 
 export default function ContactUs() {
   const t = useTranslations("Home");
@@ -24,32 +16,32 @@ export default function ContactUs() {
           <SubscribeInput />
         </div>
         <div className="mt-5 flex w-full items-center justify-start space-x-5 sm:mt-0 sm:w-fit">
-          <HoverSocialIcon
-            onClick={handleGoDiscord}
+          <SocialIcon
+            type="discord"
             src="/icons/discord-gray.svg"
             hoverSrc="/icons/discord.svg"
             width={32}
             height={32}
             alt="discord"
           />
-          <HoverSocialIcon
-            onClick={handleGoTwitter}
+          <SocialIcon
+            type="twitter"
             src="/icons/twitter-gray.svg"
             hoverSrc="/icons/twitter.svg"
             width={32}
             height={32}
             alt="x"
           />
-          <HoverSocialIcon
-            onClick={handleGoGithub}
+          <SocialIcon
+            type="github"
             src="/icons/github.svg"
             hoverSrc="/icons/github.svg"
             width={32}
             height={32}
             alt="discord"
           />
-          <HoverSocialIcon
-            onClick={handleGoTg}
+          <SocialIcon
+            type="tg"
             src="/icons/telegram.svg"
             hoverSrc="/icons/telegram.svg"
             width={32}
@@ -67,12 +59,7 @@ export default function ContactUs() {
           alt="logo"
           className="mb-8 sm:mb-0"
         />
-        <div className="flex flex-wrap items-center justify-between gap-x-10 sm:flex-nowrap">
-          {/* <LinkItem href={DiscordLink}>{t("lb-SubmitTicket")}</LinkItem>
-          <LinkItem href="">{t("lb-ListingProposal")}</LinkItem> */}
-          {/* <LinkItem href="">{t("lb-ContactUs")}</LinkItem>
-          <LinkItem href={DocLink}>{t("lb-Docs")}</LinkItem> */}
-        </div>
+        <div className="flex flex-wrap items-center justify-between gap-x-10 sm:flex-nowrap"></div>
       </div>
 
       <div
@@ -82,65 +69,11 @@ export default function ContactUs() {
         }}
       >
         <div className="text-sm leading-5 text-lightgray">
-          <span className="hidden sm:inline-block">
-            Copyright @ Whity Ltd 2024. All Rights Reserved.
-          </span>
-          <span className="inline-block sm:hidden">
+          <span className="inline-block">
             Copyright @ Whity Ltd 2024. All Rights Reserved.
           </span>
         </div>
       </div>
-    </div>
-  );
-}
-
-// function LinkItem({
-//   href,
-//   children,
-// }: {
-//   href: string;
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <a
-//       className="text-sm leading-5 text-lightgray hover:text-black"
-//       href={href}
-//     >
-//       {children}
-//     </a>
-//   );
-// }
-
-function HoverSocialIcon({
-  src,
-  hoverSrc,
-  width,
-  height,
-  alt,
-  onClick,
-}: {
-  src: string;
-  hoverSrc: string;
-  width: number;
-  height: number;
-  alt: string;
-  onClick: () => void;
-}) {
-  const [isHover, setIsHover] = useState(false);
-
-  return (
-    <div
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-      onClick={onClick}
-      className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl border border-gray sm:h-14 sm:w-14"
-    >
-      <Image
-        src={isHover ? hoverSrc : src}
-        width={width}
-        height={height}
-        alt={alt}
-      />
     </div>
   );
 }

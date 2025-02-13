@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { usePathname, useRouter } from "@/app/navigation";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import PageFooter from "@/app/[locale]/_page-layout/_page-footer";
+import { handleGoApp } from "@/lib/utils/jump-url";
 
 export default function MobileRouterMenu() {
   const [showMenu, setShowMenu] = useState(false);
@@ -34,60 +34,23 @@ export default function MobileRouterMenu() {
 }
 
 function MenuList({ onEnd }: { onEnd: () => void }) {
-  const t = useTranslations("Header");
-  const router = useRouter();
-  const routePath = [`/dashboard`, `/marketplace`];
-  const currentRoute = usePathname();
-
-  const isDashboardActive = currentRoute.includes(routePath[0]);
-  const isMarketplaceActive = currentRoute.includes(routePath[1]);
-  const isBountyActive = currentRoute.includes(routePath[1]);
-
-  const handleClick = (r: string) => {
-    if (currentRoute === r) {
-      onEnd();
-      return;
-    }
-
-    router.push(r);
-    onEnd();
-  };
+  const t = useTranslations("Home");
 
   return (
     <div className="fixed left-0 top-[100px] z-10 h-[calc(100vh-100px)] w-screen bg-white p-4">
       <div
-        data-active={isDashboardActive}
-        className="mb-2 flex items-center space-x-3 py-3 data-[active=true]:opacity-50"
+        className="mb-2 flex items-center justify-between py-3"
         style={{
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
         }}
-        onClick={() => handleClick("/dashboard")}
-      >
-        <Image
-          src={
-            isDashboardActive ? "/icons/dashboard.svg" : "/icons/dashboard.svg"
-          }
-          width={40}
-          height={40}
-          alt="pools"
-        />
-        <div className="text-lg leading-5 text-black">{t("btn-Dashboard")}</div>
-      </div>
-      <div
-        data-active={isMarketplaceActive}
-        className="mb-2 flex items-center justify-between py-3 data-[active=true]:opacity-50"
-        style={{
-          boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
+        onClick={() => {
+          handleGoApp("/marketplace");
+          onEnd();
         }}
-        onClick={() => handleClick("/marketplace")}
       >
         <div className="flex items-center justify-start space-x-3">
           <Image
-            src={
-              isMarketplaceActive
-                ? "/icons/Marketplace.svg"
-                : "/icons/Marketplace.svg"
-            }
+            src="/icons/Marketplace.svg"
             width={40}
             height={40}
             alt="governance"
@@ -98,16 +61,18 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
         </div>
       </div>
       <div
-        data-active={isBountyActive}
-        className="mb-2 flex items-center justify-between py-3 data-[active=true]:opacity-50"
+        className="mb-2 flex items-center justify-between py-3"
         style={{
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
         }}
-        onClick={() => handleClick("/bounty")}
+        onClick={() => {
+          handleGoApp("/bounty");
+          onEnd();
+        }}
       >
         <div className="flex items-center justify-start space-x-3">
           <Image
-            src={isBountyActive ? "/icons/task.svg" : "/icons/task.svg"}
+            src="/icons/task.svg"
             width={40}
             height={40}
             alt="governance"

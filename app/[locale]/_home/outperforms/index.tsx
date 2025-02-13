@@ -1,7 +1,7 @@
-"use client";
 import { cn } from "@/lib/utils/common";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import ReadMore from "./read-more";
 
 export default function OutPerforms() {
   const t = useTranslations("Home");
@@ -41,7 +41,7 @@ export default function OutPerforms() {
                 {t("p-MaximizedCapitalEfficiency")}
               </div>
             </div>
-            <ReadMore onClick={() => {}} />
+            <ReadMore />
           </div>
         </div>
 
@@ -59,7 +59,7 @@ export default function OutPerforms() {
                 {t("p-HighLiquidityForSeamlessTrading")}
               </div>
             </div>
-            <ReadMore onClick={() => {}} />
+            <ReadMore />
           </div>
           <div className="flex flex-1 items-stretch justify-center">
             <Image
@@ -93,7 +93,7 @@ export default function OutPerforms() {
                 {t("p-LowTradingFee")}
               </div>
             </div>
-            <ReadMore onClick={() => {}} />
+            <ReadMore />
           </div>
         </div>
 
@@ -111,7 +111,7 @@ export default function OutPerforms() {
                 {t("p-AdvancedTradingInsights")}
               </div>
             </div>
-            <ReadMore onClick={() => {}} />
+            <ReadMore />
           </div>
           <div className="flex flex-1 items-stretch justify-center">
             <Image
@@ -145,7 +145,7 @@ export default function OutPerforms() {
                 {t("p-RobustSecurity")}
               </div>
             </div>
-            <ReadMore onClick={() => {}} />
+            <ReadMore />
           </div>
         </div>
 
@@ -163,7 +163,7 @@ export default function OutPerforms() {
                 {t("p-InstantRewards")}
               </div>
             </div>
-            <ReadMore onClick={() => {}} />
+            <ReadMore />
           </div>
           <div className="flex flex-1 items-stretch justify-center">
             <Image
@@ -197,25 +197,9 @@ export default function OutPerforms() {
                 {t("p-RobustSecurity")}
               </div>
             </div>
-            <ReadMore onClick={() => {}} />
+            <ReadMore />
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function ReadMore({ onClick }: { onClick: () => void }) {
-  const t = useTranslations("Home");
-
-  return (
-    <div
-      onClick={onClick}
-      className="mt-6 flex h-12 w-[200px] cursor-pointer items-center justify-center space-x-1 rounded-xl bg-yellow text-lg leading-6 hover:w-[200px] hover:bg-yellow sm:mb-10 sm:mt-0 sm:w-fit sm:bg-transparent"
-    >
-      <div className="flex justify-between space-x-1">
-        <div className="text-lg leading-6 text-black">{t("btn-ReadMore")}</div>
-        <Image src="/icons/right-arrow.svg" width={24} height={24} alt="go" />
       </div>
     </div>
   );
