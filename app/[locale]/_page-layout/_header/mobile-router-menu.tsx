@@ -67,7 +67,7 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
         }}
         onClick={() => {
-          handleGoApp("/mission", locale);
+          handleGoApp("/missions", locale);
           onEnd();
         }}
       >

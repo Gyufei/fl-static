@@ -12,7 +12,10 @@ export default function ToAppBtn({
   const locale = useLocale();
 
   return (
-    <div onClick={() => handleGoApp(href, locale)} className="cursor-pointer">
+    <div
+      onClick={() => handleGoApp(href, locale)}
+      className="w-full cursor-pointer sm:w-fit"
+    >
       <div className="flex h-12 w-full items-center justify-center rounded-xl bg-yellow px-5 text-lg leading-6 ">
         {label}
       </div>

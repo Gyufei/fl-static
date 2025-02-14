@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/app/navigation";
-import NewestItemCard from "./newest-item-card";
 import { DocLink } from "@/lib/utils/jump-url";
 import ToAppBtn from "./to-app-btn";
 
@@ -10,31 +9,25 @@ export default function HomeBanner() {
 
   return (
     <div
-      className="flex h-[680px] flex-col items-center pt-[50px] sm:pt-[252px]"
+      className="flex h-fit flex-col items-center pb-12 pt-12 sm:h-[680px] sm:pb-0 sm:pt-[252px]"
       style={{
         backgroundImage: "url(/img/home/home-bg-1.png)",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="relative hidden min-w-[1023px] text-center text-[50px] leading-[72px] text-black sm:flex sm:flex-col">
-        {t("cap-DecentralizedPreMarketInfrastructure")}
+      <div className="relative flex flex-row px-4 text-center text-[36px] font-bold leading-[54px] text-black sm:min-w-[1023px] sm:flex-col sm:px-0 sm:text-[50px] sm:leading-[72px]">
+        {t("cap-CenterTitle")}
         <Image
           src="/img/home/home-title-path.png"
           width={220}
           height={160}
           alt="home title path"
-          className="absolute -left-[120px] top-[66px]"
+          className="absolute -left-[120px] top-[66px] hidden sm:block"
         />
       </div>
-      <div className="flex justify-center text-center text-[40px] leading-[60px] text-black sm:hidden">
-        {t("cap-DecentralizedPreMarketInfrastructure")}
-      </div>
 
-      <div className="mt-10 hidden text-center text-xl leading-[30px] text-lightgray sm:flex">
-        {t("cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets")}
-      </div>
-      <div className="mt-[10px] block text-center text-sm leading-[20px] text-lightgray sm:hidden">
+      <div className="mt-[10px] text-center text-sm leading-5 text-lightgray sm:mt-10 sm:text-xl sm:leading-[30px]">
         {t("cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets")}
       </div>
 
@@ -48,14 +41,18 @@ export default function HomeBanner() {
           href={DocLink}
           className="ml-1 mt-[22px] flex cursor-pointer items-center space-x-1 sm:ml-0 sm:mt-0"
         >
-          <div className="text-lg leading-6 text-black">
+          <div className="text-lg leading-6 text-gray">
             {t("btn-ReadTheDocs")}
           </div>
-          <Image src="/icons/right-arrow.svg" width={24} height={24} alt="go" />
+          <Image
+            src="/icons/right-arrow.svg"
+            className="opacity-80"
+            width={24}
+            height={24}
+            alt="go"
+          />
         </Link>
       </div>
-
-      <NewestItemCard />
     </div>
   );
 }

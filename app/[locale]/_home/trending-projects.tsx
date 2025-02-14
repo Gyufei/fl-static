@@ -27,8 +27,8 @@ export default function TrendingProject() {
   }, [marketplaceData]);
 
   return (
-    <div className="flex flex-col items-center pt-20">
-      <div className="text-[40px] leading-10 text-black">
+    <div className="flex flex-col items-center py-10 sm:py-20">
+      <div className="text-2xl font-bold leading-9 text-black sm:text-4xl sm:leading-[54px]">
         {t("cap-TrendingProjects")}
       </div>
       <div className="mt-6 flex w-full flex-col items-start gap-x-5 gap-y-9 px-4 py-5 sm:grid sm:grid-cols-4 sm:flex-row sm:items-stretch sm:overflow-x-hidden">
@@ -87,7 +87,7 @@ function ItemCard({
       <div className="flex items-start justify-between pl-20">
         <div className="flex space-x-3">
           <div className="flex flex-col">
-            <div className="w-[140px] overflow-hidden text-ellipsis whitespace-nowrap text-sm leading-[20px] text-black">
+            <div className="w-[140px] overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold leading-[20px] text-black">
               {marketplace.item_name}
             </div>
             <div className="h-[18px] text-xs leading-[18px] text-gray"></div>

@@ -17,13 +17,12 @@ export default function Faqs() {
   const [openIdx, setOpenIdx] = useState(-1);
 
   return (
-    <div className="mt-[60px] bg-[rgba(224,255,98,0.1)] px-4 py-20 sm:px-[120px]">
-      <div className="flex items-center justify-between">
-        <div />
-        <div className="text-center text-2xl leading-9 text-black sm:text-4xl sm:leading-[54px]">
+    <div className="bg-[rgba(224,255,98,0.1)] px-4 py-10 sm:px-[120px] sm:py-20">
+      <div className="flex items-center justify-center sm:justify-between">
+        <div className="flex-1 text-center text-2xl font-bold leading-9 text-black sm:text-4xl sm:leading-[54px]">
           {t("cap-FAQ")}
         </div>
-        <div className="flex cursor-pointer items-center space-x-1">
+        <div className="hidden cursor-pointer items-center space-x-1 sm:flex">
           <Link className="flex items-center" href={`${DocLink}/faq`}>
             <div className="text-lg leading-6 text-black">{t("btn-More")}</div>
             <Image
@@ -106,6 +105,18 @@ export default function Faqs() {
           <CollContent>{t("p-WhatExactlyAreTadleGems")}</CollContent>
         </CollapsibleContent>
       </Collapsible>
+
+      <div className="mt-6 flex items-center justify-center sm:hidden">
+        <Link
+          className="flex h-12 w-[200px] cursor-pointer items-center  justify-center space-x-1 rounded-xl bg-yellow "
+          href={`${DocLink}/faq`}
+        >
+          <div className="text-lg leading-6 text-black">
+            {t("btn-ReadMore")}
+          </div>
+          <Image src="/icons/right-arrow.svg" width={24} height={24} alt="go" />
+        </Link>
+      </div>
     </div>
   );
 }

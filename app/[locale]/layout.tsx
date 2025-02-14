@@ -3,7 +3,6 @@ import { AeonikFont } from "@/app/fonts";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { cn } from "@/lib/utils/common";
-import SWRConfigProvider from "@/components/provider/swr-config-provider";
 import { redirect } from "next/navigation";
 import { locales } from "../../i18n";
 
@@ -67,15 +66,13 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={cn(AeonikFont.variable)}>
-        <SWRConfigProvider>
-          <NextIntlClientProvider messages={messages}>
-            <div className="h-screen w-screen overflow-y-auto overflow-x-hidden bg-white">
-              <div className="flex w-full flex-col justify-between">
-                <div className="relative mx-auto w-full">{children}</div>
-              </div>
+        <NextIntlClientProvider messages={messages}>
+          <div className="h-screen w-screen overflow-y-auto overflow-x-hidden bg-white">
+            <div className="flex w-full flex-col justify-between">
+              <div className="relative mx-auto w-full">{children}</div>
             </div>
-          </NextIntlClientProvider>
-        </SWRConfigProvider>
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 {
   "Home": {
-    "cap-DecentralizedPreMarketInfrastructure": "预测。交易。真正获利。",
+    "cap-CenterTitle": "预测。交易。真正获利。",
     "cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets": "Taas: 全栈交易服务，让你真正拥有喜爱的项目",
     "btn-LaunchPointsMarketplace": "交易项目宝石",
     "btn-LaunchMissionMarketplace": "探索任务",
@@ -8,7 +8,7 @@
     "th-ItemId": "项目 ID",
     "th-Asset": "资产",
     "th-Value": "价值",
-    "cap-TheFutureOfOradingStartsHere": "交易的未来从这里开始",
+    "cap-TheFutureOfTradingStartsHere": "交易的未来从这里开始",
     "cap-SpecialPointMarket": "特殊的宝石市场",
     "p-SpecialPointMarket": "Tadle旨在释放加密货币项目的非流动性资产，为所有参与者提供公平的竞争环境。通过Tadle任务市场，您可以完成任务赚取可立即兑换成USDT的Tadle宝石；通过Tadle宝石市场，您可以交易优质项目的宝石，在项目代币发行(TGE)前确保您的空投资格和收益。",
     "btn-TradingPoints": "交易宝石",

@@ -28,18 +28,18 @@ export default function ModeDesc() {
         backgroundPosition: "right bottom",
       }}
     >
-      <div className="mb-7 flex items-center justify-center space-x-5 text-lg leading-6 sm:justify-start">
+      <div className="mb-4 flex items-center justify-center space-x-5 text-lg leading-6 sm:mb-7 sm:justify-start">
         <div
           data-active={mode === "trading"}
           onClick={() => setMode("trading")}
-          className="flex h-12 cursor-pointer items-center justify-center rounded-xl px-[20px] text-[#c0c4cc] data-[active=true]:bg-yellow data-[active=true]:text-black md:px-[30px]"
+          className="flex h-12 cursor-pointer items-center justify-center rounded-xl px-[20px] text-[#c0c4cc] data-[active=true]:bg-yellow data-[active=true]:text-black sm:px-[30px]"
         >
           {t("btn-TradingPoints")}
         </div>
         <div
           data-active={mode === "completing"}
           onClick={() => setMode("completing")}
-          className="flex h-12 cursor-pointer items-center justify-center rounded-xl px-[30px] text-[#c0c4cc] data-[active=true]:bg-yellow data-[active=true]:text-black"
+          className="flex h-12 cursor-pointer items-center justify-center rounded-xl px-[20px] text-[#c0c4cc] data-[active=true]:bg-yellow data-[active=true]:text-black sm:px-[30px]"
         >
           {t("btn-CompletingMissions")}
         </div>
@@ -48,7 +48,7 @@ export default function ModeDesc() {
         {mode === "trading" && (
           <div
             className={cn(
-              "flex flex-col space-y-4 text-base leading-[30px] text-gray",
+              "flex flex-col space-y-4 text-base leading-6 text-gray",
             )}
           >
             <div>{t("p-TradingPoints1")}</div>
@@ -67,7 +67,7 @@ export default function ModeDesc() {
 
         <div
           onClick={handleGo}
-          className="mt-[50px] flex cursor-pointer items-center space-x-1 sm:mt-[20px]"
+          className="mt-[40px] flex cursor-pointer items-center space-x-1 sm:mt-[20px]"
         >
           <div className="text-lg leading-6 text-black">
             {mode === "completing"

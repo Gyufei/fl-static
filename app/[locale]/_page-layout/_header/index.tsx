@@ -15,11 +15,10 @@ export default function Header() {
         <div className="hidden flex-1 items-center justify-end space-x-4 sm:flex md:space-x-6"></div>
 
         {/* Mobile */}
-        <div className="flex flex-1 items-center justify-between sm:hidden">
-          <div></div>
+        <div className="relative flex flex-1 items-center justify-center sm:hidden">
           <Link href="/">
             <div className="flex h-11 cursor-pointer items-center justify-center sm:hidden">
-              <div className="flex h-6 items-center justify-center rounded-full bg-yellow">
+              <div className="flex h-6 items-center justify-center rounded-full">
                 <Image
                   src="/icons/logo.svg"
                   alt="logo"
@@ -29,7 +28,7 @@ export default function Header() {
               </div>
             </div>
           </Link>
-          <div className="flex items-center space-x-4">
+          <div className="absolute right-0 top-0 flex items-center space-x-4">
             <MobileRouterMenu />
           </div>
         </div>

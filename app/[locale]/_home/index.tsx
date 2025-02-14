@@ -1,5 +1,5 @@
 import HomeBanner from "./home-banner";
-import MakeMoney from "./make-money";
+import Future from "./future";
 import TrendingProject from "./trending-projects";
 import Faqs from "./faqs";
 import OutPerforms from "./outperforms";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="mx-0">
       <HomeBanner />
-      <MakeMoney />
+      <Future />
       <OutPerforms />
       <GetStart />
       <TrendingProject />

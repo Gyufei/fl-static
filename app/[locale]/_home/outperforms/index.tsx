@@ -7,8 +7,8 @@ export default function OutPerforms() {
   const t = useTranslations("Home");
 
   return (
-    <div className="flex flex-col items-center bg-[rgba(224,255,98,0.1)] px-4 pt-[80px] sm:px-[120px]">
-      <div className="text-[24px] leading-9 text-black sm:text-[40px] sm:leading-10">
+    <div className="flex flex-col items-center bg-[rgba(224,255,98,0.1)] px-4 py-10 sm:px-[120px] sm:py-[80px]">
+      <div className="text-[24px] font-bold leading-9 text-black sm:text-[40px] sm:leading-10">
         {t("cap-WhyTadleOutperformsOthers")}
       </div>
       <div

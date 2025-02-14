@@ -7,10 +7,10 @@ export default function ContactUs() {
   const t = useTranslations("Home");
 
   return (
-    <div className="bg-[#F9FAF2] px-4 pt-[60px] sm:px-[120px]">
+    <div className="bg-[#F9FAF2] px-4 pt-10 sm:px-[120px] sm:pt-[60px]">
       <div className="flex flex-col items-end justify-between sm:flex-row">
         <div className="flex w-full flex-col items-center sm:w-fit sm:items-start">
-          <div className="text-center text-2xl leading-9 text-black sm:text-4xl sm:text-[40px] sm:leading-[54px]">
+          <div className="text-center text-2xl font-bold leading-9 text-black sm:text-4xl sm:text-[40px] sm:leading-[54px]">
             {t("cap-UnlockEarlyAccess")}
           </div>
           <SubscribeInput />
@@ -51,14 +51,8 @@ export default function ContactUs() {
         </div>
       </div>
 
-      <div className="flex flex-col items-start justify-between px-0 py-[60px] sm:flex-row sm:items-center">
-        <Image
-          src="/icons/logo.svg"
-          width={75}
-          height={20}
-          alt="logo"
-          className="mb-8 sm:mb-0"
-        />
+      <div className="flex flex-col items-start justify-between px-0 pb-5 pt-8 sm:flex-row sm:items-center sm:pb-[60px] sm:pt-[60px]">
+        <Image src="/icons/logo.svg" width={75} height={20} alt="logo" />
         <div className="flex flex-wrap items-center justify-between gap-x-10 sm:flex-nowrap"></div>
       </div>
 

@@ -1,6 +1,6 @@
-import useSWR from "swr";
 import { dataApiFetcher } from "@/lib/api/fetcher";
 import { WithCDN, WithDataApiHost } from "@/lib/api/PathMap";
+import { useEffect, useState } from "react";
 
 export enum ChainType {
   ETH = "eth",
@@ -65,25 +65,44 @@ export function checkIsAfterTge(mpTge: string) {
   return now > tgeTimeNum;
 }
 
-export function useMarketplaces(chain?: string) {
+export function useMarketplaces() {
+  const [data, setData] = useState<Array<IMarketplace>>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   async function allChainFetch() {
-    const res = await dataApiFetcher(`${WithDataApiHost("/markets")}`);
+    try {
+      setIsLoading(true);
+      const res = await dataApiFetcher(`${WithDataApiHost("/markets")}`);
 
-    const allMarket = res.flat().map((m: any) => {
-      const chain = m.chain_name;
-      return {
-        ...m,
-        projectLogo: WithCDN(`/${chain}/images/project/${m.market_symbol}.png`),
-        pointLogo: WithCDN(`/${chain}/images/point/${m.market_symbol}.png`),
-        chain,
-        status: m.market_symbol === "spherex" ? "offline" : m.status,
-      };
-    });
+      const allMarket = res.flat().map((m: any) => {
+        const chain = m.chain_name;
+        return {
+          ...m,
+          projectLogo: WithCDN(
+            `/${chain}/images/project/${m.market_symbol}.png`,
+          ),
+          pointLogo: WithCDN(`/${chain}/images/point/${m.market_symbol}.png`),
+          chain,
+          status: m.market_symbol === "spherex" ? "offline" : m.status,
+        };
+      });
 
-    return allMarket as Array<IMarketplace>;
+      setData(allMarket as Array<IMarketplace>);
+      setIsLoading(false);
+
+      return allMarket as Array<IMarketplace>;
+    } catch (error) {
+      setIsLoading(false);
+      return [];
+    }
   }
 
-  const res = useSWR(`marketplaces-${chain || "all"}`, allChainFetch);
+  useEffect(() => {
+    allChainFetch();
+  }, []);
 
-  return res;
+  return {
+    data,
+    isLoading,
+  };
 }

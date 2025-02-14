@@ -44,7 +44,7 @@ export default function NavigationBtns() {
           <TooltipTrigger>
             <div className="relative flex items-center">
               <div
-                onClick={() => handleClick(`/mission`)}
+                onClick={() => handleClick(`/missions`)}
                 className="z-20 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-[#D3D4D6] hover:border-transparent hover:bg-yellow"
               >
                 <Image

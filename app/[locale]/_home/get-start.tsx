@@ -7,24 +7,26 @@ export default function GetStart() {
   const t = useTranslations("Home");
 
   return (
-    <div className="flex flex-col items-center bg-[rgba(224,255,98,0.1)] px-4 py-20 sm:px-[120px]">
-      <div className="hidden text-[40px] leading-10 text-black sm:flex">
+    <div className="flex flex-col items-center bg-[rgba(224,255,98,0.1)] px-4 py-10 sm:px-[120px] sm:py-20">
+      <div className="hidden text-[40px] font-bold leading-10 text-black sm:flex">
         {t("cap-HowToGetStartedWithTadle")}
       </div>
-      <div className="flex text-[24px] leading-9 text-black sm:hidden">
+      <div className="mb-10 flex text-[24px] font-bold leading-9 text-black sm:hidden">
         {t("cap-ProductAdvantages")}
       </div>
       <div className="mt-5 flex flex-col items-center justify-between space-x-0 space-y-6 sm:flex-row sm:space-x-10 sm:space-y-0">
         <div className="flex flex-col">
           <div className="relative h-[280px] w-[374px] overflow-hidden rounded-[20px] bg-yellow px-[30px] pb-6 pl-6 pt-[40px]">
             <div className="flex h-full flex-col justify-between">
-              <div className="text-[40px] leading-9 text-black">01</div>
+              <div className="text-[32px] font-bold leading-9 text-black sm:text-[40px]">
+                01
+              </div>
               <div>
-                <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
+                <div className="text-base leading-5 text-[rgba(45,46,51,0.4)]">
                   {t("txt-Step")} 1
                 </div>
                 <Link href={`${DocLink}/user-guides/get-started-for-users`}>
-                  <div className="text-[24px] leading-9 text-black">
+                  <div className="text-xl leading-[30px] text-black sm:text-lg sm:leading-9">
                     {t("txt-ConnectToYourWallet")}
                   </div>
                 </Link>
@@ -50,15 +52,16 @@ export default function GetStart() {
           </div>
 
           <div
-            className="relative mt-10 h-[280px] w-[374px] overflow-hidden rounded-[20px] bg-white px-[30px] pb-6 pl-6 pt-[40px]"
+            className="relative mt-10 h-[280px] w-[374px] overflow-hidden rounded-[20px] border border-[rgba(153,160,175,0.3)] bg-white bg-cover px-[30px] pb-6 pl-6 pt-[40px] shadow-[4px_8px_40px_0px_rgba(45,46,51,0.04)]"
             style={{
               backgroundImage: "url(/img/home/home-search-project.png)",
-              backgroundSize: "cover",
             }}
           >
             <div className="flex h-full flex-col justify-between">
               <div className="flex items-center justify-between">
-                <div className="text-[40px] leading-9 text-black">02</div>
+                <div className="text-[32px] font-bold leading-9 text-black sm:text-[40px]">
+                  02
+                </div>
                 <Image
                   className="absolute right-6 top-6"
                   src="/icons/search-project.svg"
@@ -68,11 +71,11 @@ export default function GetStart() {
                 />
               </div>
               <div>
-                <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
+                <div className="text-base leading-5 text-[rgba(45,46,51,0.4)]">
                   {t("txt-Step")} 2
                 </div>
                 <Link href={`${DocLink}/user-guides/get-started-for-users`}>
-                  <div className="text-[24px] leading-9 text-black">
+                  <div className="text-xl leading-[30px] text-black sm:text-lg sm:leading-9">
                     {t("txt-SearchForTheProjects")}
                   </div>
                 </Link>
@@ -82,15 +85,16 @@ export default function GetStart() {
         </div>
 
         <div
-          className="relative h-[280px] w-[374px] overflow-hidden rounded-[20px] bg-white px-[30px] pb-6 pl-6 pt-[40px] sm:h-[400px]"
+          className="relative mt-10 h-[280px] w-[374px] overflow-hidden rounded-[20px] border border-[rgba(153,160,175,0.3)] bg-white bg-cover px-[30px] pb-6 pl-6 pt-[40px] shadow-[4px_8px_40px_0px_rgba(45,46,51,0.04)]"
           style={{
-            backgroundImage: "url(/img/home/home-buy-sell-order.png)",
-            backgroundSize: "cover",
+            backgroundImage: "url(/img/home/home-search-project.png)",
           }}
         >
           <div className="flex h-full flex-col justify-between">
             <div className="flex items-center justify-between">
-              <div className="text-[40px] leading-9 text-black">03</div>
+              <div className="text-[32px] font-bold leading-9 text-black sm:text-[40px]">
+                03
+              </div>
               <Image
                 className="absolute right-6 top-6"
                 src="/icons/buy-sell-order.svg"
@@ -100,11 +104,11 @@ export default function GetStart() {
               />
             </div>
             <div>
-              <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
+              <div className="text-base leading-5 text-[rgba(45,46,51,0.4)]">
                 {t("txt-Step")} 3
               </div>
               <Link href={`${DocLink}/user-guides/get-started-for-users`}>
-                <div className="text-[24px] leading-9 text-black">
+                <div className="text-xl leading-[30px] text-black sm:text-lg sm:leading-9">
                   {t("txt-PlaceABuyOrSellOrder")}
                 </div>
               </Link>
@@ -113,29 +117,30 @@ export default function GetStart() {
         </div>
 
         <div
-          className="relative mt-10 h-[280px] w-[374px] overflow-hidden rounded-[20px] bg-white px-[30px] pb-6 pl-6 pt-[40px]"
+          className="relative mt-10 h-[280px] w-[374px] overflow-hidden rounded-[20px] border border-[rgba(153,160,175,0.3)] bg-white bg-cover px-[30px] pb-6 pl-6 pt-[40px] shadow-[4px_8px_40px_0px_rgba(45,46,51,0.04)]"
           style={{
             backgroundImage: "url(/img/home/home-search-project.png)",
-            backgroundSize: "cover",
           }}
         >
           <div className="flex h-full flex-col justify-between">
             <div className="flex items-center justify-between">
-              <div className="text-[40px] leading-9 text-black">04</div>
+              <div className="text-[32px] font-bold leading-9 text-black sm:text-[40px]">
+                04
+              </div>
               <Image
                 className="absolute right-6 top-6"
-                src="/icons/search-project.svg"
+                src="/icons/check-dashboard.svg"
                 width={100}
                 height={100}
                 alt="wallet"
               />
             </div>
             <div>
-              <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
+              <div className="text-base leading-5 text-[rgba(45,46,51,0.4)]">
                 {t("txt-Step")} 4
               </div>
               <Link href={`${DocLink}/user-guides/get-started-for-users`}>
-                <div className="text-[24px] leading-9 text-black">
+                <div className="text-xl leading-[30px] text-black sm:text-lg sm:leading-9">
                   {t("txt-CheckMetricsInDashboard")}
                 </div>
               </Link>

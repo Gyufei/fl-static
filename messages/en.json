@@ -1,6 +1,6 @@
 {
   "Home": {
-    "cap-DecentralizedPreMarketInfrastructure": "To predict. To trade. To own.",
+    "cap-CenterTitle": "To predict. To trade. To own.",
     "cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets": "TaaS: Trading-as-a-Service, handing you your favorite projects.",
     "btn-LaunchPointsMarketplace": "Trade Gems",
     "btn-LaunchMissionMarketplace": "Discover Missions",
@@ -8,7 +8,7 @@
     "th-ItemId": "Item ID",
     "th-Asset": "Asset",
     "th-Value": "Value",
-    "cap-TheFutureOfOradingStartsHere": "The future of trading starts here",
+    "cap-TheFutureOfTradingStartsHere": "The future of trading starts here",
     "cap-SpecialPointMarket": "Special Gems Market",
     "p-SpecialPointMarket": "Tadle is designed to unlock illiquid assets for crypto projects, leveling the playing field for all participants. With the Tadle Missions, you can complete quests to earn Tadle Gems that can be traded immediately for USDT, and with the Tadle Gems Marketplace, you trade project gems from premier projects, and secure your position for upcoming airdrops and profits before a project's TGE.",
     "btn-TradingPoints": "Trading Gems",
