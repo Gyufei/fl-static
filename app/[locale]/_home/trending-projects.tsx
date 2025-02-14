@@ -2,10 +2,9 @@
 
 import { useMemo } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import NP from "number-precision";
 
-import { useRouter } from "@/app/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatNum, toPercent } from "@/lib/utils/number";
 
@@ -15,6 +14,7 @@ import {
   ProjectDecimalsMap,
   checkIsAfterTge,
 } from "@/lib/api/use-marketplaces";
+import { handleGoApp } from "@/lib/utils/jump-url";
 
 export default function TrendingProject() {
   const t = useTranslations("Home");
@@ -52,7 +52,7 @@ function ItemCard({
   isLoadingFlag: boolean;
 }) {
   const t = useTranslations("Home");
-  const router = useRouter();
+  const locale = useLocale();
 
   const pointDecimalNum = useMemo(() => {
     if (marketplace && ProjectDecimalsMap[marketplace.market_symbol]) {
@@ -64,7 +64,7 @@ function ItemCard({
   }, [marketplace]);
 
   function handleGo() {
-    router.push(`/market/gems/${marketplace.market_symbol}`);
+    handleGoApp(`/market/gems/${marketplace.market_symbol}`, locale);
   }
 
   return (

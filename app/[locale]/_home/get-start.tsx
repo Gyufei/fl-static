@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/app/navigation";
+import { DocLink } from "@/lib/utils/jump-url";
 
 export default function GetStart() {
   const t = useTranslations("Home");
@@ -22,7 +23,7 @@ export default function GetStart() {
                 <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
                   {t("txt-Step")} 1
                 </div>
-                <Link href="https://tadle.gitbook.io/tadle/user-guides/get-started-for-users">
+                <Link href={`${DocLink}/user-guides/get-started-for-users`}>
                   <div className="text-[24px] leading-9 text-black">
                     {t("txt-ConnectToYourWallet")}
                   </div>
@@ -70,7 +71,7 @@ export default function GetStart() {
                 <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
                   {t("txt-Step")} 2
                 </div>
-                <Link href="https://tadle.gitbook.io/tadle/user-guides/get-started-for-users">
+                <Link href={`${DocLink}/user-guides/get-started-for-users`}>
                   <div className="text-[24px] leading-9 text-black">
                     {t("txt-SearchForTheProjects")}
                   </div>
@@ -102,7 +103,7 @@ export default function GetStart() {
               <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
                 {t("txt-Step")} 3
               </div>
-              <Link href="https://tadle.gitbook.io/tadle/user-guides/get-started-for-users">
+              <Link href={`${DocLink}/user-guides/get-started-for-users`}>
                 <div className="text-[24px] leading-9 text-black">
                   {t("txt-PlaceABuyOrSellOrder")}
                 </div>
@@ -133,7 +134,7 @@ export default function GetStart() {
               <div className="text-[22px] leading-6 text-[rgba(45,46,51,0.4)]">
                 {t("txt-Step")} 4
               </div>
-              <Link href="https://tadle.gitbook.io/tadle/user-guides/get-started-for-users">
+              <Link href={`${DocLink}/user-guides/get-started-for-users`}>
                 <div className="text-[24px] leading-9 text-black">
                   {t("txt-CheckMetricsInDashboard")}
                 </div>

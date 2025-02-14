@@ -10,6 +10,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { DocLink } from "@/lib/utils/jump-url";
 
 export default function Faqs() {
   const t = useTranslations("Home");
@@ -23,10 +24,7 @@ export default function Faqs() {
           {t("cap-FAQ")}
         </div>
         <div className="flex cursor-pointer items-center space-x-1">
-          <Link
-            className="flex items-center"
-            href="https://tadle.gitbook.io/tadle/faq"
-          >
+          <Link className="flex items-center" href={`${DocLink}/faq`}>
             <div className="text-lg leading-6 text-black">{t("btn-More")}</div>
             <Image
               src="/icons/right-arrow.svg"

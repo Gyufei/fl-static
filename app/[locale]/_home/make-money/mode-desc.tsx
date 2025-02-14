@@ -1,14 +1,23 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import { Link } from "@/app/navigation";
 import { cn } from "@/lib/utils/common";
+import { handleGoApp } from "@/lib/utils/jump-url";
 
 export default function ModeDesc() {
   const t = useTranslations("Home");
+  const locale = useLocale();
   const [mode, setMode] = useState("trading");
+
+  function handleGo() {
+    if (mode === "completing") {
+      handleGoApp(`/missions`, locale);
+    } else {
+      handleGoApp(`/market/gems`, locale);
+    }
+  }
 
   return (
     <div
@@ -56,8 +65,8 @@ export default function ModeDesc() {
           </div>
         )}
 
-        <Link
-          href={mode === "completing" ? "/missions" : "/market/gems"}
+        <div
+          onClick={handleGo}
           className="mt-[50px] flex cursor-pointer items-center space-x-1 sm:mt-[20px]"
         >
           <div className="text-lg leading-6 text-black">
@@ -66,7 +75,7 @@ export default function ModeDesc() {
               : t("btn-StartTrading")}
           </div>
           <Image src="/icons/right-arrow.svg" width={24} height={24} alt="go" />
-        </Link>
+        </div>
       </div>
     </div>
   );
