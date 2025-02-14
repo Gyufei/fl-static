@@ -29,7 +29,7 @@ export default function LanguageSetting() {
       label: "简体中文(CN)",
       value: "zh",
       logo: "/icons/china.svg",
-    }
+    },
   ];
 
   function handleSelectLang(t: string) {
