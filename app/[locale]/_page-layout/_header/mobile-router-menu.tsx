@@ -45,7 +45,7 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
         }}
         onClick={() => {
-          handleGoApp("/marketplace", locale);
+          handleGoApp("/market/gems", locale);
           onEnd();
         }}
       >
@@ -67,7 +67,7 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
         }}
         onClick={() => {
-          handleGoApp("/bounty", locale);
+          handleGoApp("/mission", locale);
           onEnd();
         }}
       >
@@ -78,7 +78,7 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
             height={40}
             alt="governance"
           />
-          <div className="text-lg leading-5 text-black">{t("btn-Bounty")}</div>
+          <div className="text-lg leading-5 text-black">{t("btn-Missions")}</div>
         </div>
       </div>
       <PageFooter className="fixed bottom-0 left-0 w-screen" />

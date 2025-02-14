@@ -41,9 +41,9 @@ export default function HomeBanner() {
       <div className="mt-10 flex w-full flex-col items-center space-y-3 px-4 sm:w-fit sm:flex-row sm:space-x-10 sm:space-y-0 sm:px-0">
         <ToAppBtn
           label={t("btn-LaunchPointsMarketplace")}
-          href="/marketplace"
+          href="/market/gems"
         />
-        <ToAppBtn label={t("btn-LaunchMissionMarketplace")} href="/bounty" />
+        <ToAppBtn label={t("btn-LaunchMissionMarketplace")} href="/missions" />
         <Link
           href={DocLink}
           className="ml-1 mt-[22px] flex cursor-pointer items-center space-x-1 sm:ml-0 sm:mt-0"

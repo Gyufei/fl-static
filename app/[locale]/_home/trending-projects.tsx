@@ -64,7 +64,7 @@ function ItemCard({
   }, [marketplace]);
 
   function handleGo() {
-    router.push(`/marketplace/${marketplace.market_symbol}`);
+    router.push(`/market/gems/${marketplace.market_symbol}`);
   }
 
   return (
