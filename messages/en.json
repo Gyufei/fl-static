@@ -1,10 +1,9 @@
 {
   "Home": {
     "cap-CenterTitle": "To predict. To trade. To own.",
-    "cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets": "TaaS: Trading-as-a-Service, handing you your favorite projects.",
+    "cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets": "TaaS: Trading-as-a-Service, making your favorite projects yours.",
     "btn-LaunchOdds": "Launch Odds App",
     "btn-ReadTheDocs": "Read the Docs",
-
     "cap-PowerTheFutureOfTrading": "Power the Future of Trading,",
     "cap-RewardsAndPredictions": "Rewards & Predictions.",
     "cap-CompletingMissions": "Completing Missions",
@@ -16,28 +15,25 @@
     "cap-TradingPoints": "Trading Gems",
     "p-TradingPoints": "Skip the grind of airdrop farming and trade points from top web3 projects to easily position yourself for airdrops before TGE. Project points can be traded as many times as desired.",
     "lb-TradeProjectPoints": "Trade Project Points",
-
     "btn-ReadMore": "Read More",
     "cap-WhyTadleOutperformsOthers": "Why Tadle?",
-    "cap-WhyTadleOutperformsOthersDesc": "Tadle is designed for users like you who want to maximize their trading potential and earn rewards instantly. Buy and sell project gems with ease, and position yourself advantageously for airdrops, or complete quests and be rewarded with Tadle Gems to be traded instantly for USDT.",
+    "cap-WhyTadleOutperformsOthersDesc": "Tadle is built for traders looking to unlock liquidity, instant rewards, and predictive markets. Transforming engagement into real value.",
     "cap-MaximizedCapitalEfficiency": "Maximized Capital Efficiency",
     "p-MaximizedCapitalEfficiency": "Trade project points freely with no collateral required. Get in early by trading project points before token launches.",
     "cap-InstantRewards": "Instant Rewards",
-    "p-InstantRewards": "Complete missions to participate in a project’s ecosystem and trade out immediately!",
+    "p-InstantRewards": "Complete quests from top projects and earn Tadle Gems, which can be instantly traded for stablecoins or used for exclusive opportunities.",
     "cap-LockInAlphas": "Lock in Alphas",
     "p-LockInAlphas": "Back your market predictions on key project events, token launches, and milestones, adjusting positions as new information unfolds.",
     "cap-AdvancedMarketInsights": "Advanced Market Insights",
     "p-AdvancedMarketInsights": "Access to powerful data and analytics dashboards to refine your trading strategy.",
     "cap-SecureAndTransparent": "Secure & Transparent",
     "p-SecureAndTransparent": "Decentralized arbitration ensures fair settlements, while robust security keeps your assets protected.",
-
     "cap-HowToGetStartedWithTadle": "How to get started with Tadle",
     "txt-Step": "Step",
     "txt-ConnectToYourWallet": "Connect to your wallet",
     "txt-SearchForTheProjects": "Search for the projects",
     "txt-PlaceABuyOrSellOrder": "Place a buy or sell order",
     "txt-CheckMetricsInDashboard": "Check metrics in dashboard",
-
     "cap-FAQ": "Frequently Asked Questions",
     "btn-LearnMore": "Learn More",
     "cap-WhatIsTadle": "What is Tadle?",
@@ -54,7 +50,6 @@
     "p-WhatIsTheTadleOddsMarketplace": "The Odds Marketplace enables users to place predictions on key project milestones and market events, turning insights into potential rewards.",
     "cap-HowDoesTadleOddsWork": "How does Tadle Odds work?",
     "p-HowDoesTadleOddsWork": "Users can predict project-related events, If their predictions are correct, they earn rewards based on market outcomes. Predictions can be placed on project growth, token launch dates, TVL milestones, branding, performance, metrics, ecosystem milestones, governance decisions, and more, allowing traders to capitalize on real market events.",
-
     "cap-UnlockEarlyAccess": "Unlock Early Access:",
     "p-UnlockEarlyAccess": "Tadle is constantly evolving. Subscribe to learn about changes.",
     "pl-EnterEmailAddress": "Enter Email Address",
