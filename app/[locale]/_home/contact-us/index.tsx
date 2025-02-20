@@ -7,18 +7,21 @@ export default function ContactUs() {
   const t = useTranslations("Home");
 
   return (
-    <div className="bg-[#F9FAF2] px-4 pt-10 sm:px-[120px] sm:pt-[60px]">
+    <div className="bg-primaryColor px-4 pt-10 sm:px-[120px] sm:pt-[60px]">
       <div className="flex flex-col items-end justify-between sm:flex-row">
         <div className="flex w-full flex-col items-center sm:w-fit sm:items-start">
-          <div className="text-center text-2xl font-bold leading-9 text-black sm:text-4xl sm:text-[40px] sm:leading-[54px]">
+          <div className="text-center text-2xl font-medium leading-9 text-[#fff] sm:text-4xl sm:text-[40px] sm:leading-[54px]">
             {t("cap-UnlockEarlyAccess")}
+          </div>
+          <div className="text-sm leading-5 text-[#ffffff60] sm:text-base sm:leading-6">
+            {t("p-UnlockEarlyAccess")}
           </div>
           <SubscribeInput />
         </div>
-        <div className="mt-5 flex w-full items-center justify-start space-x-5 sm:mt-0 sm:w-fit">
+        <div className="mt-[30px] flex w-full items-center justify-center space-x-5 sm:mt-0 sm:w-fit sm:justify-start">
           <SocialIcon
             type="discord"
-            src="/icons/discord-gray.svg"
+            src="/icons/discord.svg"
             hoverSrc="/icons/discord.svg"
             width={32}
             height={32}
@@ -26,7 +29,7 @@ export default function ContactUs() {
           />
           <SocialIcon
             type="twitter"
-            src="/icons/twitter-gray.svg"
+            src="/icons/twitter.svg"
             hoverSrc="/icons/twitter.svg"
             width={32}
             height={32}
@@ -51,18 +54,12 @@ export default function ContactUs() {
         </div>
       </div>
 
-      <div className="flex flex-col items-start justify-between px-0 pb-5 pt-8 sm:flex-row sm:items-center sm:pb-[60px] sm:pt-[60px]">
-        <Image src="/icons/logo.svg" width={75} height={20} alt="logo" />
-        <div className="flex flex-wrap items-center justify-between gap-x-10 sm:flex-nowrap"></div>
+      <div className="flex items-center justify-center px-0 pb-5 pt-8 sm:flex-row sm:items-center sm:justify-start sm:pb-[60px] sm:pt-[60px]">
+        <Image src="/icons/logo-white.svg" width={75} height={20} alt="logo" />
       </div>
 
-      <div
-        className="flex h-10 items-center justify-between px-0 py-[24px]"
-        style={{
-          boxShadow: "inset 0px 1px 0px 0px #EEEEEE",
-        }}
-      >
-        <div className="text-sm leading-5 text-lightgray">
+      <div className="flex h-[60px] items-center justify-center border-t border-[#ffffff30] sm:justify-start">
+        <div className="text-sm leading-5 text-[#ffffff60]">
           <span className="inline-block">
             Copyright @ Whity Ltd 2024. All Rights Reserved.
           </span>

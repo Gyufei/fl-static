@@ -1,8 +1,13 @@
-import { isProduction } from "../api/PathMap";
+export const isPreview = process.env.NEXT_PUBLIC_IS_PREVIEW === "1";
+export const isProduction = process.env.NODE_ENV === "production" && !isPreview;
 
 export const AppLink = isProduction
-  ? "https://gems.tadle.com"
+  ? "https://marketplace.tadle.com"
   : "https://preview.tadle.com";
+
+export const OddsLink = isProduction
+  ? "https://tadle-odds.netlify.app/markets"
+  : "https://tadle-odds.netlify.app/markets";
 
 export const TwitterLink = "https://x.com/tadle_com";
 export const DiscordLink =

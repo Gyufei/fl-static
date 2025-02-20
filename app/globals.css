@@ -7,13 +7,7 @@ body {
 }
 
 :root {
-  --color-black: #2d2e33;
-  --color-yellow: #e0ff62;
-  --color-green: #4cbf87;
-  --color-red: #ff6262;
-  --color-gary: #99a0af;
-  --color-lightgray: #c0c4cc;
-  --color-focus: #3dd866;
+  --color-primary: #6e75f9;
 }
 
 @layer base {

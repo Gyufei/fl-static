@@ -51,7 +51,7 @@ export default function HoverSocialIcon({
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       onClick={onClick}
-      className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl border border-gray sm:h-14 sm:w-14"
+      className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl border border-[#ffffff40] bg-[#9398FF] sm:h-14 sm:w-14"
     >
       <Image
         src={isHover ? hoverSrc : src}

@@ -7,22 +7,22 @@ export default function OutPerforms() {
   const t = useTranslations("Home");
 
   return (
-    <div className="flex flex-col items-center bg-[rgba(224,255,98,0.1)] px-4 py-10 sm:px-[120px] sm:py-[80px]">
-      <div className="text-[24px] font-bold leading-9 text-black sm:text-[40px] sm:leading-10">
+    <div className="flex flex-col items-center bg-white px-4 py-[50px] sm:px-[120px] sm:py-[120px]">
+      <div className="text-2xl font-medium leading-9 text-[#0F1324] sm:text-[44px] sm:leading-[60px]">
         {t("cap-WhyTadleOutperformsOthers")}
       </div>
       <div
         className={cn(
-          "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
+          "mt-[10px] text-center text-base leading-6 text-[#6E6F79] sm:mt-10 sm:px-[200px] sm:text-xl sm:leading-[30px]",
         )}
       >
         {t("cap-WhyTadleOutperformsOthersDesc")}
       </div>
-      <div className="mt-[60px] flex flex-col items-stretch">
+      <div className="mt-6 flex flex-col items-stretch sm:mt-[90px]">
         <div className="flex flex-1 flex-col items-center justify-between sm:flex-row sm:items-stretch">
           <div className="flex flex-1 items-stretch justify-center">
             <Image
-              src="/img/home/rocket.png"
+              src="/img/home/rocket.svg"
               width={560}
               height={372}
               alt="rocket"
@@ -30,12 +30,12 @@ export default function OutPerforms() {
           </div>
           <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
             <div>
-              <div className="text-center text-base leading-6 text-black sm:text-left sm:text-[30px] sm:leading-[42px]">
+              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
                 {t("cap-MaximizedCapitalEfficiency")}
               </div>
               <div
                 className={cn(
-                  "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
+                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
                 )}
               >
                 {t("p-MaximizedCapitalEfficiency")}
@@ -45,119 +45,15 @@ export default function OutPerforms() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-1 flex-col-reverse items-center justify-between sm:mt-0 sm:flex-row sm:items-stretch">
+        <div className="mt-20 flex flex-1 flex-col-reverse items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
           <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
             <div>
-              <div className="text-center text-base leading-6 text-black sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-HighLiquidityForSeamlessTrading")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-HighLiquidityForSeamlessTrading")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/liquidity.png"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-1 flex-col items-center justify-between sm:mt-0 sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/fee.png"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-base leading-6 text-black sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-LowTradingFee")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-LowTradingFee")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-1 flex-col-reverse items-center justify-between sm:mt-[87px] sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-base leading-6 text-black sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-AdvancedTradingInsights")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-AdvancedTradingInsights")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/system.png"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-1 flex-col items-center justify-between sm:mt-[87px] sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/security.png"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-base leading-6 text-black sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-RobustSecurity")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-RobustSecurity")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-1 flex-col-reverse items-center justify-between sm:mt-[87px] sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-base leading-6 text-black sm:text-left sm:text-[30px] sm:leading-[42px]">
+              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
                 {t("cap-InstantRewards")}
               </div>
               <div
                 className={cn(
-                  "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
+                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
                 )}
               >
                 {t("p-InstantRewards")}
@@ -167,7 +63,7 @@ export default function OutPerforms() {
           </div>
           <div className="flex flex-1 items-stretch justify-center">
             <Image
-              src="/img/home/settlements.png"
+              src="/img/home/settlements.svg"
               width={560}
               height={372}
               alt="rocket"
@@ -175,10 +71,10 @@ export default function OutPerforms() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-1 flex-col items-center justify-between sm:mt-[87px] sm:flex-row sm:items-stretch">
+        <div className="mt-20 flex flex-1 flex-col items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
           <div className="flex flex-1 items-stretch justify-center">
             <Image
-              src="/img/home/instant-rewards.png"
+              src="/img/home/liquidity.svg"
               width={560}
               height={372}
               alt="rocket"
@@ -186,15 +82,67 @@ export default function OutPerforms() {
           </div>
           <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
             <div>
-              <div className="text-center text-base leading-6 text-black sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-RobustSecurity")}
+              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
+                {t("cap-LockInAlphas")}
               </div>
               <div
                 className={cn(
-                  "mt-6 text-center text-sm leading-6 text-gray sm:text-left sm:text-xl sm:leading-[30px]",
+                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
                 )}
               >
-                {t("p-RobustSecurity")}
+                {t("p-LockInAlphas")}
+              </div>
+            </div>
+            <ReadMore />
+          </div>
+        </div>
+
+        <div className="mt-20 flex flex-1 flex-col-reverse items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
+          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
+            <div>
+              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
+                {t("cap-AdvancedTradingInsights")}
+              </div>
+              <div
+                className={cn(
+                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
+                )}
+              >
+                {t("p-AdvancedTradingInsights")}
+              </div>
+            </div>
+            <ReadMore />
+          </div>
+          <div className="flex flex-1 items-stretch justify-center">
+            <Image
+              src="/img/home/system.svg"
+              width={560}
+              height={372}
+              alt="rocket"
+            />
+          </div>
+        </div>
+
+        <div className="mt-20 flex flex-1 flex-col items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
+          <div className="flex flex-1 items-stretch justify-center">
+            <Image
+              src="/img/home/security.svg"
+              width={560}
+              height={372}
+              alt="rocket"
+            />
+          </div>
+          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
+            <div>
+              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
+                {t("cap-SecureAndTransparent")}
+              </div>
+              <div
+                className={cn(
+                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
+                )}
+              >
+                {t("p-SecureAndTransparent")}
               </div>
             </div>
             <ReadMore />

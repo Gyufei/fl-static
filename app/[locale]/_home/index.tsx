@@ -1,6 +1,5 @@
 import HomeBanner from "./home-banner";
 import Future from "./future";
-import TrendingProject from "./trending-projects";
 import Faqs from "./faqs";
 import OutPerforms from "./outperforms";
 import GetStart from "./get-start";
@@ -13,7 +12,6 @@ export default function Home() {
       <Future />
       <OutPerforms />
       <GetStart />
-      <TrendingProject />
       <Faqs />
       <ContactUs />
     </div>
