@@ -1,10 +1,10 @@
 import { isProduction } from "../api/PathMap";
 
 export const TadleOddsAppLink = isProduction
-  ? "https://tadle-odds.netlify.app"
-  : "https://tadle-odds.netlify.app";
+  ? "https://odds.tadle.com"
+  : "https://odds.tadle.com";
 
-  export const MissionsAppLink = isProduction
+export const MissionsAppLink = isProduction
   ? "https://missions.tadle.com"
   : "https://preview.tadle.com";
 
