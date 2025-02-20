@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { handleGoApp } from "@/lib/utils/jump-url";
+import { getGoAppUrl } from "@/lib/utils/jump-url";
+import { Link } from "@/app/navigation";
 import {
   Tooltip,
   TooltipContent,
@@ -13,18 +14,16 @@ export default function NavigationBtns() {
   const t = useTranslations("Home");
   const locale = useLocale();
 
-  function handleClick(href: string) {
-    handleGoApp(href, locale);
-  }
-
   return (
     <div className="hidden flex-1 items-center space-x-5 sm:flex">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
             <div className="relative flex items-center">
-              <div
-                onClick={() => handleClick(`/market/gems`)}
+              <Link
+                href={getGoAppUrl("missions", "/market/gems", locale)}
+                target="_blank"
+                rel="noreferrer"
                 className="z-20 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-[#D3D4D6] hover:border-transparent hover:bg-yellow data-[active=true]:w-fit"
               >
                 <Image
@@ -34,7 +33,7 @@ export default function NavigationBtns() {
                   alt="marketplace"
                   className="cursor-pointer"
                 />
-              </div>
+              </Link>
             </div>
           </TooltipTrigger>
           <TooltipContent>{t("btn-Marketplace")}</TooltipContent>
@@ -43,8 +42,10 @@ export default function NavigationBtns() {
         <Tooltip>
           <TooltipTrigger>
             <div className="relative flex items-center">
-              <div
-                onClick={() => handleClick(`/missions`)}
+              <Link
+                href={getGoAppUrl("missions", "/missions", locale)}
+                target="_blank"
+                rel="noreferrer"
                 className="z-20 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-[#D3D4D6] hover:border-transparent hover:bg-yellow"
               >
                 <Image
@@ -54,7 +55,7 @@ export default function NavigationBtns() {
                   alt="mission"
                   className="cursor-pointer"
                 />
-              </div>
+              </Link>
             </div>
           </TooltipTrigger>
           <TooltipContent>{t("btn-Missions")}</TooltipContent>

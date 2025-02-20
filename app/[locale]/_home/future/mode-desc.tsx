@@ -4,18 +4,19 @@ import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils/common";
-import { handleGoApp } from "@/lib/utils/jump-url";
+import { getGoAppUrl } from "@/lib/utils/jump-url";
+import { Link } from "@/app/navigation";
 
 export default function ModeDesc() {
   const t = useTranslations("Home");
   const locale = useLocale();
   const [mode, setMode] = useState("trading");
 
-  function handleGo() {
+  function getUrl () {
     if (mode === "completing") {
-      handleGoApp(`/missions`, locale);
+     return getGoAppUrl('missions', `/missions`, locale);
     } else {
-      handleGoApp(`/market/gems`, locale);
+      return getGoAppUrl('missions', `/market/gems`, locale);
     }
   }
 
@@ -65,8 +66,11 @@ export default function ModeDesc() {
           </div>
         )}
 
-        <div
-          onClick={handleGo}
+        <Link
+          href={getUrl()}
+          target="_blank"
+          rel="noreferrer"
+          
           className="mt-[40px] flex cursor-pointer items-center space-x-1 sm:mt-[20px]"
         >
           <div className="text-lg leading-6 text-black">
@@ -75,7 +79,7 @@ export default function ModeDesc() {
               : t("btn-StartTrading")}
           </div>
           <Image src="/icons/right-arrow.svg" width={24} height={24} alt="go" />
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -14,7 +14,8 @@ import {
   ProjectDecimalsMap,
   checkIsAfterTge,
 } from "@/lib/api/use-marketplaces";
-import { handleGoApp } from "@/lib/utils/jump-url";
+import { getGoAppUrl } from "@/lib/utils/jump-url";
+import { Link } from "@/app/navigation";
 
 export default function TrendingProject() {
   const t = useTranslations("Home");
@@ -63,14 +64,13 @@ function ItemCard({
     return 1;
   }, [marketplace]);
 
-  function handleGo() {
-    handleGoApp(`/market/gems/${marketplace.market_symbol}`, locale);
-  }
 
   return (
-    <div
+    <Link
+      href={getGoAppUrl('missions', `/market/gems/${marketplace.market_symbol}`, locale)}
+      target="_blank"
+      rel="noreferrer"
       className="relative w-full cursor-pointer rounded-3xl p-5 pt-3 sm:w-auto sm:min-w-fit"
-      onClick={handleGo}
       style={{
         background:
           "linear-gradient(180deg, #F0F1F5 0%, rgba(240, 241, 245, 0.5) 100%)",
@@ -203,7 +203,7 @@ function ItemCard({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

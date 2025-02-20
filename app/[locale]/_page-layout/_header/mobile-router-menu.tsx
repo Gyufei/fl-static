@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import PageFooter from "@/app/[locale]/_page-layout/_page-footer";
-import { handleGoApp } from "@/lib/utils/jump-url";
+import { getGoAppUrl } from "@/lib/utils/jump-url";
+import { Link } from "@/app/navigation";
 
 export default function MobileRouterMenu() {
   const [showMenu, setShowMenu] = useState(false);
@@ -28,25 +29,24 @@ export default function MobileRouterMenu() {
           </div>
         )}
       </button>
-      {showMenu && <MenuList onEnd={() => setShowMenu(false)} />}
+      {showMenu && <MenuList />}
     </div>
   );
 }
 
-function MenuList({ onEnd }: { onEnd: () => void }) {
+function MenuList() {
   const locale = useLocale();
   const t = useTranslations("Home");
 
   return (
     <div className="fixed left-0 top-[100px] z-10 h-[calc(100vh-100px)] w-screen bg-white p-4">
-      <div
+      <Link
+        href={getGoAppUrl("missions", "/market/gems", locale)}
+        target="_blank"
+        rel="noreferrer"
         className="mb-2 flex items-center justify-between py-3"
         style={{
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
-        }}
-        onClick={() => {
-          handleGoApp("/market/gems", locale);
-          onEnd();
         }}
       >
         <div className="flex items-center justify-start space-x-3">
@@ -60,15 +60,14 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
             {t("btn-Marketplace")}
           </div>
         </div>
-      </div>
-      <div
+      </Link>
+      <Link
+        href={getGoAppUrl("missions", "/missions", locale)}
+        target="_blank"
+        rel="noreferrer"
         className="mb-2 flex items-center justify-between py-3"
         style={{
           boxShadow: "inset 0px -1px 0px 0px rgba(14, 4, 62, 0.1)",
-        }}
-        onClick={() => {
-          handleGoApp("/missions", locale);
-          onEnd();
         }}
       >
         <div className="flex items-center justify-start space-x-3">
@@ -80,7 +79,7 @@ function MenuList({ onEnd }: { onEnd: () => void }) {
           />
           <div className="text-lg leading-5 text-black">{t("btn-Missions")}</div>
         </div>
-      </div>
+      </Link>
       <PageFooter className="fixed bottom-0 left-0 w-screen" />
     </div>
   );

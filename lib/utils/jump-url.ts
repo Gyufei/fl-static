@@ -1,7 +1,11 @@
 import { isProduction } from "../api/PathMap";
 
-export const AppLink = isProduction
-  ? "https://gems.tadle.com"
+export const TadleOddsAppLink = isProduction
+  ? "https://tadle-odds.netlify.app"
+  : "https://tadle-odds.netlify.app";
+
+  export const MissionsAppLink = isProduction
+  ? "https://missions.tadle.com"
   : "https://preview.tadle.com";
 
 export const TwitterLink = "https://x.com/tadle_com";
@@ -11,8 +15,8 @@ export const TgLink = "https://t.me/tadlecom";
 export const GithubLink = "https://github.com/tadle-com";
 export const DocLink = "https://tadle.gitbook.io/tadle";
 
-export const handleGoApp = (path: string = "", locale: string = "") => {
-  window.open(AppLink + `/${locale}` + path);
+export const getGoAppUrl = (type: string, path: string = "", locale: string = "") => {
+  return `${type === "missions" ? MissionsAppLink : TadleOddsAppLink}/${locale}${path}`;
 };
 
 export const handleGoTwitter = () => {
