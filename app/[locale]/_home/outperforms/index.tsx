@@ -101,14 +101,14 @@ export default function OutPerforms() {
           <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
             <div>
               <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-AdvancedTradingInsights")}
+                {t("cap-AdvancedMarketInsights")}
               </div>
               <div
                 className={cn(
                   "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
                 )}
               >
-                {t("p-AdvancedTradingInsights")}
+                {t("p-AdvancedMarketInsights")}
               </div>
             </div>
             <ReadMore />

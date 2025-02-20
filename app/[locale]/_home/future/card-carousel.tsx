@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/app/navigation";
-import { AppLink, OddsLink } from "@/lib/utils/jump-url";
+import {
+  MarketplaceLink,
+  MissionsAppLink,
+  OddsLink,
+} from "@/lib/utils/jump-url";
 import {
   Carousel,
   CarouselApi,
@@ -112,14 +116,13 @@ function StepIndicator({
 
 function Card1() {
   const t = useTranslations("Home");
-  const locale = useLocale();
 
   return (
     <CardDisplay
       title={t("cap-CompletingMissions")}
       description={t("p-CompletingMissions")}
       linkName={t("lb-GetTadleGems")}
-      linkUrl={AppLink + `/${locale}/gems`}
+      linkUrl={MissionsAppLink}
     />
   );
 }
@@ -139,14 +142,13 @@ function Card2() {
 
 function Card3() {
   const t = useTranslations("Home");
-  const locale = useLocale();
 
   return (
     <CardDisplay
       title={t("cap-TradingPoints")}
       description={t("p-TradingPoints")}
       linkName={t("lb-TradeProjectPoints")}
-      linkUrl={AppLink + `/${locale}/gems`}
+      linkUrl={MarketplaceLink}
     />
   );
 }

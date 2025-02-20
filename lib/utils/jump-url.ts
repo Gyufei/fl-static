@@ -1,13 +1,17 @@
 export const isPreview = process.env.NEXT_PUBLIC_IS_PREVIEW === "1";
 export const isProduction = process.env.NODE_ENV === "production" && !isPreview;
 
-export const AppLink = isProduction
+export const MarketplaceLink = isProduction
   ? "https://marketplace.tadle.com"
-  : "https://preview.tadle.com";
+  : "https://preview-marketplace.tadle.com";
+
+export const MissionsAppLink = isProduction
+  ? "https://missions.tadle.com"
+  : "https://preview-missions.tadle.com";
 
 export const OddsLink = isProduction
-  ? "https://tadle-odds.netlify.app/markets"
-  : "https://tadle-odds.netlify.app/markets";
+  ? "https://odds.tadle.com"
+  : "https://preview-odds.tadle.com";
 
 export const TwitterLink = "https://x.com/tadle_com";
 export const DiscordLink =
@@ -15,10 +19,6 @@ export const DiscordLink =
 export const TgLink = "https://t.me/tadlecom";
 export const GithubLink = "https://github.com/tadle-com";
 export const DocLink = "https://tadle.gitbook.io/tadle";
-
-export const handleGoApp = (path: string = "", locale: string = "") => {
-  window.open(AppLink + `/${locale}` + path);
-};
 
 export const handleGoTwitter = () => {
   window.open(TwitterLink);
