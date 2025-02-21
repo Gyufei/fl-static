@@ -164,10 +164,25 @@ function CardDisplay({
   linkName: string;
   linkUrl: string;
 }) {
+  const outerSizeClx =
+    "h-[350px] w-full overflow-hidden sm:h-[392px] sm:w-[396px]";
+  const innerSizeClx =
+    "h-[336px] w-[calc(100%-15px)] rounded-[20px] sm:h-[375px] sm:w-[380px]";
+
   return (
-    <div className="relative h-[350px] w-[358px] overflow-hidden sm:h-[392px] sm:w-[396px]">
-      <div className="absolute left-3 top-3 z-0 h-[336px] w-[343px] rounded-[20px] border-[2px] border-[#ffffff60] sm:h-[375px] sm:w-[380px]"></div>
-      <div className="flex h-[336px] w-[343px] flex-col items-stretch justify-between rounded-[20px] bg-white p-5 shadow-[10px_10px_40px_0px_#486BD4] sm:h-[375px] sm:w-[380px] sm:p-[30px]">
+    <div className={cn("relative", outerSizeClx)}>
+      <div
+        className={cn(
+          "absolute left-3 top-3 z-0 border-[2px] border-[#ffffff60]",
+          innerSizeClx,
+        )}
+      ></div>
+      <div
+        className={cn(
+          "flex flex-col items-stretch justify-between bg-white p-5 shadow-[10px_10px_40px_0px_#486BD4]",
+          innerSizeClx,
+        )}
+      >
         <div className="z-10 mt-[5px]">
           <div className="text-[20px] font-medium leading-[30px] text-[#121721] sm:text-[28px] sm:leading-[36px]">
             {title}
