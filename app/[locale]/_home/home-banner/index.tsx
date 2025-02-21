@@ -17,19 +17,37 @@ export default function HomeBanner() {
         }}
       >
         <div className="flex h-14 items-center justify-center bg-[#ffffff10] sm:h-24">
-          <Image src="/icons/logo.svg" alt="logo" width={105} height={28} />
+          <Image
+            className="hidden sm:block"
+            src="/icons/logo.svg"
+            alt="logo"
+            width={105}
+            height={28}
+          />
+          <Image
+            className="block sm:hidden"
+            src="/icons/logo.svg"
+            alt="logo"
+            width={75}
+            height={20}
+          />
         </div>
 
         <div className="relative mt-6 flex flex-row px-4 sm:mt-[146px] sm:min-w-[1023px] sm:flex-col sm:px-0">
           <div
-            className="px-[70px] text-center text-[50px] font-medium leading-[56px] sm:px-0 sm:text-[80px] sm:leading-[100px]"
+            className="text-center text-[50px] font-medium leading-[56px] sm:text-[80px] sm:leading-[100px]"
             style={{
               background: "linear-gradient(180deg, #6E75F9 0%, #989DFF 100%)",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}
           >
-            {t("cap-CenterTitle")}
+            <span className="hidden sm:inline">{t("cap-CenterTitle")}</span>
+            <span className="sm:hidden">
+              {t.rich("cap-CenterTitle-Mobile", {
+                tag: () => <br />,
+              })}
+            </span>
           </div>
           <Image
             src="/img/home/home-title-path.png?v=2"
@@ -40,7 +58,7 @@ export default function HomeBanner() {
           />
         </div>
 
-        <div className="mt-5 text-center text-base leading-6 text-[#0F132460] sm:mt-[70px] sm:text-xl sm:leading-[30px]">
+        <div className="mt-5 text-center text-base leading-6 text-[#6E6F79] sm:mt-[70px] sm:text-xl sm:leading-[30px]">
           {t("cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets")}
         </div>
 
@@ -54,13 +72,13 @@ export default function HomeBanner() {
 
           <Link
             href={DocLink}
-            className="mt-[20px] flex h-12 cursor-pointer items-center space-x-[6px] sm:h-fit"
+            className="mt-[10px] flex cursor-pointer items-center space-x-[6px]"
           >
             <div className="text-lg leading-6 text-[#0F132460]">
               {t("btn-ReadTheDocs")}
             </div>
             <Image
-              src="/icons/right-arrow-gray.svg"
+              src="/icons/arrow-right-gray.svg"
               className="opacity-80"
               width={24}
               height={24}

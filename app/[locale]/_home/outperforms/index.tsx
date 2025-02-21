@@ -19,136 +19,108 @@ export default function OutPerforms() {
         {t("cap-WhyTadleOutperformsOthersDesc")}
       </div>
       <div className="mt-6 flex flex-col items-stretch sm:mt-[90px]">
-        <div className="flex flex-1 flex-col items-center justify-between sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/rocket.svg"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-MaximizedCapitalEfficiency")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-MaximizedCapitalEfficiency")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-        </div>
+        <DisplayCard
+          imageSrc="/img/home/rocket.svg"
+          title={t("cap-MaximizedCapitalEfficiency")}
+          description={t("p-MaximizedCapitalEfficiency")}
+        />
 
-        <div className="mt-20 flex flex-1 flex-col-reverse items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-InstantRewards")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-InstantRewards")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/settlements.svg"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-        </div>
+        <DisplayCard
+          className="mt-20 sm:mt-[170px]"
+          isReverse
+          imageSrc="/img/home/settlements.svg"
+          title={t("cap-InstantRewards")}
+          description={t("p-InstantRewards")}
+        />
 
-        <div className="mt-20 flex flex-1 flex-col items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/liquidity.svg"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-LockInAlphas")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-LockInAlphas")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-        </div>
+        <DisplayCard
+          className="mt-20 sm:mt-[170px]"
+          imageSrc="/img/home/liquidity.svg"
+          title={t("cap-LockInAlphas")}
+          description={t("p-LockInAlphas")}
+        />
 
-        <div className="mt-20 flex flex-1 flex-col-reverse items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-AdvancedMarketInsights")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-AdvancedMarketInsights")}
-              </div>
-            </div>
-            <ReadMore />
-          </div>
-          <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/system.svg"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
-          </div>
-        </div>
+        <DisplayCard
+          isReverse
+          className="mt-20 sm:mt-[170px]"
+          imageSrc="/img/home/system.svg"
+          title={t("cap-AdvancedMarketInsights")}
+          description={t("p-AdvancedMarketInsights")}
+        />
 
-        <div className="mt-20 flex flex-1 flex-col items-center justify-between sm:mt-[170px] sm:flex-row sm:items-stretch">
+        <DisplayCard
+          className="mt-20 sm:mt-[170px]"
+          imageSrc="/img/home/security.svg"
+          title={t("cap-SecureAndTransparent")}
+          description={t("p-SecureAndTransparent")}
+        />
+      </div>
+    </div>
+  );
+}
+
+function DisplayCard({
+  className,
+  imageSrc,
+  title,
+  description,
+  isReverse = false,
+}: {
+  className?: string;
+  imageSrc: string;
+  title: string;
+  description: string;
+  isReverse?: boolean;
+}) {
+  return (
+    <div
+      className={cn(
+        "flex flex-1 flex-col items-center justify-between sm:flex-row sm:items-stretch",
+        isReverse && "flex-col-reverse",
+        className,
+      )}
+    >
+      {isReverse ? (
+        <>
+          <DescText title={title} description={description} />
           <div className="flex flex-1 items-stretch justify-center">
-            <Image
-              src="/img/home/security.svg"
-              width={560}
-              height={372}
-              alt="rocket"
-            />
+            <Image src={imageSrc} width={560} height={372} alt="rocket" />
           </div>
-          <div className="flex flex-1 flex-col items-center pt-10 sm:items-start sm:justify-between">
-            <div>
-              <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
-                {t("cap-SecureAndTransparent")}
-              </div>
-              <div
-                className={cn(
-                  "mt-6 text-center text-base leading-6 text-[#6E6F79] sm:text-left sm:text-xl sm:leading-[30px]",
-                )}
-              >
-                {t("p-SecureAndTransparent")}
-              </div>
-            </div>
-            <ReadMore />
+        </>
+      ) : (
+        <>
+          <div className="flex flex-1 items-stretch justify-center">
+            <Image src={imageSrc} width={560} height={372} alt="rocket" />
           </div>
+          <DescText title={title} description={description} />
+        </>
+      )}
+    </div>
+  );
+}
+
+function DescText({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="mt-4 flex flex-1 flex-col items-center sm:mt-10 sm:items-start sm:justify-between">
+      <div>
+        <div className="text-center text-[18px] leading-[26px] text-[#0F1324] sm:text-left sm:text-[30px] sm:leading-[42px]">
+          {title}
+        </div>
+        <div
+          className={cn(
+            "mt-[10px] text-center text-base leading-6 text-[#6E6F79] sm:mt-6 sm:text-left sm:text-xl sm:leading-[30px]",
+          )}
+        >
+          {description}
         </div>
       </div>
+      <ReadMore />
     </div>
   );
 }

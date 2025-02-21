@@ -6,7 +6,7 @@ export default function Future() {
 
   return (
     <div
-      className="flex h-[620px] flex-col items-center px-4 sm:h-[795px] sm:px-[120px]"
+      className="flex h-[620px] flex-col items-center px-0 sm:h-[795px] sm:px-[120px]"
       style={{
         backgroundImage: "url(/img/home/home-bg-2.png)",
         backgroundSize: "100% 100%",

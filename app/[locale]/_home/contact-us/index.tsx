@@ -13,7 +13,7 @@ export default function ContactUs() {
           <div className="text-center text-2xl font-medium leading-9 text-[#fff] sm:text-4xl sm:text-[40px] sm:leading-[54px]">
             {t("cap-UnlockEarlyAccess")}
           </div>
-          <div className="text-sm leading-5 text-[#ffffff60] sm:text-base sm:leading-6">
+          <div className="mt-[10px] text-center text-sm leading-5 text-[#ffffff60] sm:text-left sm:text-base sm:leading-6">
             {t("p-UnlockEarlyAccess")}
           </div>
           <SubscribeInput />

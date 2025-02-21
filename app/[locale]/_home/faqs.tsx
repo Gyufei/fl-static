@@ -24,7 +24,7 @@ export default function Faqs() {
         </div>
         <div className="z-10 mt-[10px] flex cursor-pointer items-center justify-center space-x-1 sm:mt-10 sm:justify-start ">
           <Link
-            className="flex text-xl leading-[30px] text-primaryColor"
+            className="flex gap-x-2 text-xl leading-[30px] text-primaryColor"
             href={`${DocLink}/faq`}
           >
             <span>{t("btn-LearnMore")}</span>
@@ -40,7 +40,7 @@ export default function Faqs() {
         />
       </div>
 
-      <div className="flex-1">
+      <div className="mt-4 flex-1">
         <Coll
           openIdx={openIdx}
           setOpenIdx={setOpenIdx}
