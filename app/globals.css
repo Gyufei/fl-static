@@ -15,34 +15,14 @@ body {
     @apply !bg-transparent;
   }
 
-  input,
-  .no-outline {
+  input {
     @apply outline-none focus:outline-none focus-visible:outline-none;
   }
-}
-
-@layer components {
 }
 
 @layer utilities {
   .no-scroll-bar::-webkit-scrollbar {
     display: none; /* Chrome Safari */
-  }
-}
-
-.now-msg {
-  animation-name: now-msg;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out;
-  top: 44px;
-}
-
-@keyframes now-msg {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
 

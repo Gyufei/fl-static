@@ -60,7 +60,7 @@ export default function HomeBanner() {
               {t("btn-ReadTheDocs")}
             </div>
             <Image
-              src="/icons/right-arrow.svg"
+              src="/icons/right-arrow-gray.svg"
               className="opacity-80"
               width={24}
               height={24}
