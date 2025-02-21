@@ -54,6 +54,11 @@
     "cap-UnlockEarlyAccess": "Unlock Early Access:",
     "p-UnlockEarlyAccess": "Tadle is constantly evolving. Subscribe to learn about changes.",
     "pl-EnterEmailAddress": "Enter Email Address",
-    "btn-Subscribe": "Subscribe"
+    "btn-Subscribe": "Subscribe",
+    "cap-BuiltOn": "Built on",
+    "btn-Contact": "Contact",
+    "btn-Learn": "Learn",
+    "btn-Developers": "Developers",
+    "p-AllSystemsOperational": "All systems operational"
   }
 }
