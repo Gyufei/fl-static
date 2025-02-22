@@ -11,14 +11,16 @@ export const metadata = {
     template: "%s | Tadle",
     default: "Tadle",
   },
-  description: "To predict. To trade. To own.",
+  description:
+    "To predict. To trade. To own. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
   metadataBase: new URL(`https://${process.env.VERCEL_DOMAIN}`),
   openGraph: {
     title: "Tadle",
-    description: "To predict. To trade. To own.",
+    description:
+      "To predict. To trade. To own. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
     url: `https://${process.env.VERCEL_DOMAIN}`,
     siteName: "Tadle",
-    images: "/img/GGzCP6QaAAAm9YG.png",
+    images: "/img/YyYzEtYmU5Yy00ODk4LWJjNmE.png",
     locale: "en_US",
     type: "website",
   },
@@ -44,9 +46,10 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tadle",
-    description: "To predict. To trade. To own.",
+    description:
+      "To predict. To trade. To own. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
     creator: "@tadle_com",
-    images: ["/img/GGzCP6QaAAAm9YG.png"],
+    images: ["/img/YyYzEtYmU5Yy00ODk4LWJjNmE.png"],
   },
 };
 
