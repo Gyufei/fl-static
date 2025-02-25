@@ -20,7 +20,7 @@ export const metadata = {
       "Predict it. Trade it. Own it. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
     url: `https://${process.env.VERCEL_DOMAIN}`,
     siteName: "Tadle",
-    images: "/img/YyYzEtYmU5Yy00ODk4LWJjNmE.png",
+    images: "/img/UjXLk9pSW552Wq3jVMIQU.png",
     locale: "en_US",
     type: "website",
   },
@@ -49,7 +49,7 @@ export const metadata = {
     description:
       "Predict it. Trade it. Own it. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
     creator: "@tadle_com",
-    images: ["/img/YyYzEtYmU5Yy00ODk4LWJjNmE.png"],
+    images: ["/img/UjXLk9pSW552Wq3jVMIQU.png"],
   },
 };
 
