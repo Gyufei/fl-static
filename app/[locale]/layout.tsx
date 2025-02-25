@@ -12,12 +12,12 @@ export const metadata = {
     default: "Tadle",
   },
   description:
-    "To predict. To trade. To own. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
+    "Predict it. Trade it. Own it. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
   metadataBase: new URL(`https://${process.env.VERCEL_DOMAIN}`),
   openGraph: {
     title: "Tadle",
     description:
-      "To predict. To trade. To own. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
+      "Predict it. Trade it. Own it. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
     url: `https://${process.env.VERCEL_DOMAIN}`,
     siteName: "Tadle",
     images: "/img/YyYzEtYmU5Yy00ODk4LWJjNmE.png",
@@ -47,7 +47,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Tadle",
     description:
-      "To predict. To trade. To own. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
+      "Predict it. Trade it. Own it. Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
     creator: "@tadle_com",
     images: ["/img/YyYzEtYmU5Yy00ODk4LWJjNmE.png"],
   },
