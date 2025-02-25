@@ -54,11 +54,11 @@ export default function HomeBanner() {
             width={300}
             height={210}
             alt="home title path"
-            className="absolute left-[20px] top-[112px] hidden sm:block"
+            className="absolute -left-[30px] top-[112px] hidden sm:block"
           />
         </div>
 
-        <div className="mt-5 text-center text-base leading-6 text-[#6E6F79] sm:mt-[70px] sm:text-xl sm:leading-[30px]">
+        <div className="mt-5 px-4 text-center text-base leading-6 text-[#6E6F79] sm:mt-[70px] sm:text-xl sm:leading-[30px]">
           {t("cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets")}
         </div>
 

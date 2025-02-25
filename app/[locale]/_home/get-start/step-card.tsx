@@ -1,31 +1,36 @@
+"use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/app/navigation";
 import { DocLink } from "@/lib/utils/jump-url";
 import { cn } from "@/lib/utils/common";
+import { useState } from "react";
 
 export function StepCard({
   index,
   title,
-  imageSrc,
-  isActive = false,
+  imageSrc1,
+  imageSrc2,
   className,
 }: {
   index: number;
   title: string;
-  imageSrc: string;
-  isActive?: boolean;
+  imageSrc1: string;
+  imageSrc2: string;
   className?: string;
 }) {
+  const [isActive, setIsActive] = useState(false);
   const t = useTranslations("Home");
 
   return (
     <div
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
       className={cn(
-        "relative h-[280px] w-full rounded-[20px] px-[30px] py-6 sm:w-[374px]",
+        "relative h-[280px] w-full rounded-[20px] border px-[30px] py-6 transition-all duration-300 sm:w-[374px]",
         isActive
-          ? "bg-primaryColor"
-          : "border border-[#99A0AF30] bg-white bg-cover shadow-[4px_8px_40px_0px_rgba(45,46,51,0.04)]",
+          ? "border-primaryColor bg-primaryColor"
+          : "border-[#99A0AF30] bg-white bg-cover shadow-[4px_8px_40px_0px_rgba(45,46,51,0.04)]",
         className,
       )}
       style={{
@@ -46,7 +51,7 @@ export function StepCard({
           </div>
           <Image
             className="absolute right-6 top-6"
-            src={imageSrc}
+            src={isActive ? imageSrc2 : imageSrc1}
             width={100}
             height={100}
             alt="wallet"

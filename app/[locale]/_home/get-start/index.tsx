@@ -15,8 +15,8 @@ export default function GetStart() {
           <StepCard
             index={1}
             title={t("txt-ConnectToYourWallet")}
-            imageSrc="/icons/home-wallet.svg"
-            isActive={true}
+            imageSrc1="/icons/home-wallet.svg"
+            imageSrc2="/icons/home-wallet-white.svg"
           />
 
           <Image
@@ -24,14 +24,15 @@ export default function GetStart() {
             alt="get start"
             width={300}
             height={200}
-            className="absolute left-10 top-[100px] blur-[50px]"
+            className="absolute left-10 top-[100px] z-[-1] blur-[50px]"
           />
 
           <StepCard
             className="mt-6"
             index={2}
             title={t("txt-SearchForTheProjects")}
-            imageSrc="/icons/search-project.svg"
+            imageSrc1="/icons/search-project.svg"
+            imageSrc2="/icons/search-project-white.svg"
           />
         </div>
 
@@ -39,14 +40,16 @@ export default function GetStart() {
           className="mt-6"
           index={3}
           title={t("txt-PlaceABuyOrSellOrder")}
-          imageSrc="/icons/buy-sell-order.svg"
+          imageSrc1="/icons/buy-sell-order.svg"
+          imageSrc2="/icons/buy-sell-order-white.svg"
         />
 
         <StepCard
           className="mt-6"
           index={4}
           title={t("txt-CheckMetricsInDashboard")}
-          imageSrc="/icons/check-dashboard.svg"
+          imageSrc1="/icons/check-dashboard.svg"
+          imageSrc2="/icons/check-dashboard-white.svg"
         />
       </div>
     </div>
