@@ -1,7 +1,7 @@
 {
   "Home": {
-    "cap-CenterTitle": "To predict. To trade. To own.",
-    "cap-CenterTitle-Mobile": "To predict.<tag></tag>To trade.<tag></tag>To own.",
+    "cap-CenterTitle": "Predict it. Trade it. Own it.",
+    "cap-CenterTitle-Mobile": "Predict it.<tag></tag>Trade it.<tag></tag>Own it.",
     "cap-BridgingLiquidityBetweenPrimaryAndSecondaryMarkets": "Tadle is the first Trading-as-a-Service (TaaS) infra in the world, making your favorite projects yours.",
     "btn-LaunchOdds": "Launch Odds App",
     "btn-ReadTheDocs": "Read the Docs",
@@ -13,7 +13,7 @@
     "cap-CallItFirst": "Call It First",
     "p-CallItFirst": "Turn your market insights into rewards by engaging with project milestones and key events. The Tadle Odds Marketplace lets you back your predictions on project developments, token launches, TVL milestones, branding and more. With real-time market movements and transparent odds, you’re always in control of your strategy.",
     "lb-PredictMarketOdds": "Predict Market Odds",
-    "cap-TradingPoints": "Trading Gems",
+    "cap-TradingPoints": "Go Pre-Market",
     "p-TradingPoints": "Skip the grind of airdrop farming and trade points from top web3 projects to easily position yourself for airdrops before TGE. Project points can be traded as many times as desired.",
     "lb-TradeProjectPoints": "Trade Project Points",
     "btn-ReadMore": "Read More",
