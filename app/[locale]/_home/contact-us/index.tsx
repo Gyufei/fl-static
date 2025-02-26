@@ -73,8 +73,11 @@ export default function ContactUs() {
           </div>
         </div>
         <div className="flex items-center justify-center gap-x-[30px] sm:gap-x-14">
-          <Link href="/" className="text-sm leading-5 text-white">
-            {t("btn-Contact")}
+          <Link
+            href="/tadle-brand-kit.zip"
+            className="text-sm leading-5 text-white"
+          >
+            {t("btn-Brandkit")}
           </Link>
           <Link href={DocLink} className="text-sm leading-5 text-white">
             {t("btn-Learn")}
